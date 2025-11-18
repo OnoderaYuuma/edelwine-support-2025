@@ -87,12 +87,81 @@
     </div>
     <div class="news-card-footer"></div>
 </div>
-
-
-
     </div>
 </section>
-    <script>
+   
+
+<body>
+  <main class="page">
+    <section class="frame-group">
+      <div class="frame frame--top-left">
+        <div class="frame__line frame__line--1"></div>
+        <div class="frame__line frame__line--2"></div>
+      </div>
+
+      <div class="frame frame--top-right">
+        <div class="frame__line frame__line--3"></div>
+        <div class="frame__line frame__line--4"></div>
+      </div>
+    </section>
+
+    <!-- 目的で探す -->
+    <section class="search-section">
+      <h2 class="section-title">目的で探す</h2>
+
+      <div class="purpose">
+        <div class="purpose__contents">
+
+          <div class="purpose__item purpose__item--glass">
+            <a class="purpose__link" href="./glass.html">
+              <img class="purpose__image_glass" src="/img/index/創作.png" alt="創作体験">
+            </a>
+            <a class="purpose__label" href="./glass.html">ガラス工房森のくに</a>
+          </div>
+
+          <div class="purpose__item purpose__item--restaurant">
+            <a class="purpose__link" href="./restaurant.html">
+              <img class="purpose__image_restaurant" src="/img/index/食事.png" alt="レストラン">
+            </a>
+            <a class="purpose__label" href="./restaurant.html">レストラン ベルンドルフ</a>
+          </div>
+
+          <div class="purpose__item purpose__item--hotel">
+            <a class="purpose__link" href="./hotel.html">
+              <img class="purpose__image purpose_image_hotel" src="/img/index/宿泊.png" alt="ホテル">
+            </a>
+            <a class="purpose__label" href="./hotel.html">ホテル ベルンドルフ</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="frame-group">
+      <div class="frame frame--bottom-left">
+        <div class="frame__line frame__line--1"></div>
+        <div class="frame__line frame__line--2"></div>
+      </div>
+
+      <div class="frame frame--bottom-right">
+        <div class="frame__line frame__line--3"></div>
+        <div class="frame__line frame__line--4"></div>
+      </div>
+    </section>
+
+    <!-- Instagram -->
+    <section class="insta-section">
+      <h2 class="section-title">ガラス工房森のくに Instagram</h2>
+      <img class="insta-section__img" src="/img/index/森のくにインスタ.png" alt="ガラス工房森のくに Instagram紹介画像">
+    </section>
+
+    <!-- ぶどう装飾 -->
+    <div class="grape">
+      <img class="grape__img grape__img--fruit" src="/img/index/ぶどう.png" alt="">
+      <img class="grape__img grape__img--leaf" src="/img/index/ぶどうの葉.png" alt="">
+    </div>
+    
+     <script>
     // header.htmlを読み込んで#headerに挿入
     fetch("header.html")
       .then(res => res.text())
@@ -100,6 +169,9 @@
         document.getElementById("header").innerHTML = data;
       })
       .catch(err => console.error(err));
-  </script>
+      </script>
+
+
+  </main>
 </body>
 </html>
