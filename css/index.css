@@ -1,3 +1,214 @@
+
+body {
+   font-family: "Sawarabi Mincho", serif;
+   background: url(../img/p0522_l\ 6.png);
+}
+
+.morino-kuni-content {
+  position: absolute; 
+  top: 20%;        /* 画像の上に表示される */
+  left: 5%;
+  right: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #fff;
+  /* margin-top は絶対に入れない */
+}
+
+
+.morino-kuni-title {
+    font-size: 24px;
+    font-family: "Jacques Francois", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.morino-kuni-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.morino-kuni-text {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: #fff;
+  flex-direction: column;       /* 縦に積む */
+  justify-content: space-between; /* h1 を上、リンクを下へ */
+  height: 100%;     
+}
+
+/* リンクのリスト */
+.morino-kuni-link {
+  font-family: "Sawarabi Mincho", serif;
+  display: flex;
+  flex-direction: column;
+ border-right: 2px solid black; /* 各リンクの右に縦線 */
+  align-items: flex-end;  /* 右寄せ */
+  margin-top: 27%;
+  gap: 8%;
+  background-color: rgb(255, 255, 255,0.45);
+  padding: 1% 3%;
+
+}
+
+.morino-kuni-link a {
+   color: black;
+  text-decoration: none;
+  padding: 6%;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+   white-space: nowrap;
+}
+
+/* ホバー時の背景変化 */
+.morino-kuni-link a:hover {
+  color: #000000;  
+  font-size: 20px;    
+}
+
+.morino-kuni-address {
+  margin-top: 4%;        /* 画像との余白 */
+  margin-bottom: 4%;     /* 次のセクションとの余白 */
+  font-size: 16px;
+  font-family: "Sawarabi Mincho", serif;
+  color: #333;
+  text-align: center;
+  position: static;
+}
+
+.section-line {
+  width: 100%;       /* 横幅いっぱいに */
+  display: block;
+}
+
+/* ▼ 全体（白い枠） */
+.news-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.news-box {
+    background: #ffffff;
+    width: 94%;
+    padding: 4% 3%;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    display: flex;
+}
+
+/* ▼ 左側（最新情報タイトルとボタン） */
+.news-left {
+    width: 20%;
+    padding-top: 4%;
+    padding-left: 2%;
+}
+
+.news-title {
+    font-size: 36px;
+    font-family: "Sawarabi Mincho", serif;
+    margin-bottom: 20%;
+}
+
+.news-btn {
+    display: inline-block;
+    padding: 4.5% 10.5%;
+    border: 1px solid #B8A36C;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #333;
+    background: #fff;
+    font-size: 17px;
+}
+
+.news-btn:hover {
+    background: #f5f5f5;
+}
+
+/* ▼ 右側（カード部分） */
+.news-right {
+    width: 75%;
+}
+/* カード4つ横並び（小さく） */
+.news-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.news-card {
+    width: calc(25% - 12px);
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column; /* ← テキスト部分を伸ばせるようにする */
+}
+
+/* 画像：もう少し短く */
+.news-card img {
+    width: 100%;
+    height: 120px; 
+    object-fit: cover;
+}
+
+/* テキスト領域を伸ばすための全体ラッパー */
+.news-card-content {
+    flex-grow: 1;               /* ← テキスト部分を縦に伸ばす */
+    padding: 3% 4% 4%;    /* ← ゆとりを持たせる */
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+/* タイトル */
+.news-card h3 {
+    font-size: 14px;
+    margin-bottom: 2%; /* 広めにとる */
+    margin-top: 6%;
+    margin-left: 7%;
+}
+
+/* 店名（下の方に配置したいのでmargin調整） */
+.news-card p {
+    font-size: 12px;
+    color: #555;
+    margin-top: 19%;
+    text-align: right;
+    margin-right: 10%;
+
+}
+
+/* 下側に淡い色の帯 */
+.news-card-footer {
+    height: 16px;
+    background: #dff7fa;  /* 画像の例に似た淡い水色 */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* カードごとに色変更 */
+.card1 .news-card-footer {
+    background: #dff7fa; /* 水色 */
+}
+
+.card2 .news-card-footer {
+    background: #ffcae3; /* オレンジ系 */
+}
+
+.card3 .news-card-footer {
+    background: #fffdb4; /* 紫系 */
+}
+
+.card4 .news-card-footer {
+    background: #fffdb4; /* 緑系 */
+=======
 @charset "utf-8";
 body {
   font-family: "Sawarabi Mincho", serif;
