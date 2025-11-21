@@ -1,19 +1,23 @@
 
 body {
    font-family: "Sawarabi Mincho", serif;
-   background: url(../img/p0522_l\ 6.png);
+   background: url(../img/top/background.png);
+}
+
+.morino-kuni {
+  width: 100%;
+  height: 20%;
+  background-image: url("../img/top/top.png");
 }
 
 .morino-kuni-content {
-  position: absolute; 
-  top: 20%;        /* 画像の上に表示される */
+  top: 20%;     
   left: 5%;
   right: 5%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   color: #fff;
-  /* margin-top は絶対に入れない */
 }
 
 
@@ -22,16 +26,11 @@ body {
     font-family: "Jacques Francois", serif;
     font-weight: 400;
     font-style: normal;
-}
-
-.morino-kuni-img {
-  width: 100%;
-  height: auto;
-  display: block;
+    margin-top: 3%;
+    margin-left: 4%;
 }
 
 .morino-kuni-text {
-  position: absolute;
   top: 20%;
   left: 10%;
   color: #fff;
@@ -48,6 +47,8 @@ body {
  border-right: 2px solid black; /* 各リンクの右に縦線 */
   align-items: flex-end;  /* 右寄せ */
   margin-top: 27%;
+  margin-bottom: 5%;
+  margin-right: 3%;
   gap: 8%;
   background-color: rgb(255, 255, 255,0.45);
   padding: 1% 3%;
@@ -55,12 +56,12 @@ body {
 }
 
 .morino-kuni-link a {
-   color: black;
+  color: black;
   text-decoration: none;
   padding: 6%;
   border-radius: 4px;
   transition: all 0.3s ease;
-   white-space: nowrap;
+  white-space: nowrap;
 }
 
 /* ホバー時の背景変化 */
@@ -76,7 +77,6 @@ body {
   font-family: "Sawarabi Mincho", serif;
   color: #333;
   text-align: center;
-  position: static;
 }
 
 .section-line {
@@ -98,6 +98,7 @@ body {
     padding: 4% 3%;
     box-shadow: 0 3px 12px rgba(0,0,0,0.08);
     display: flex;
+    border: 1px solid #B8A36C;
 }
 
 /* ▼ 左側（最新情報タイトルとボタン） */
@@ -130,13 +131,14 @@ body {
 
 /* ▼ 右側（カード部分） */
 .news-right {
-    width: 75%;
+    width: 80%;
 }
 /* カード4つ横並び（小さく） */
 .news-list {
     display: flex;
     justify-content: space-between;
     gap: 16px;
+    
 }
 
 .news-card {
@@ -148,12 +150,13 @@ body {
     transition: 0.2s;
     display: flex;
     flex-direction: column; /* ← テキスト部分を伸ばせるようにする */
+    text-decoration: none;      /* 下線なくす */
+    color: inherit;             /* 文字色そのまま */
+    cursor: pointer;
 }
 
-/* 画像：もう少し短く */
 .news-card img {
     width: 100%;
-    height: 120px; 
     object-fit: cover;
 }
 
@@ -208,8 +211,8 @@ body {
 
 .card4 .news-card-footer {
     background: #fffdb4; /* 緑系 */
-=======
-@charset "utf-8";
+}
+
 body {
   font-family: "Sawarabi Mincho", serif;
   font-weight: 400;
@@ -224,6 +227,13 @@ body {
   font-weight: bold;
   font-size: 26px;
   text-align: center;
+  padding: 5% 0;
+  line-height: 1.5;
+}
+
+.insta-section .section-title {
+  margin-bottom: 3%;
+  line-height: 1.5;
 }
 
 .section-title::before,
@@ -234,7 +244,6 @@ body {
 }
 
 .purpose {
-  width: 98%;
   background-color: #fff;
   border: 2px double #B8A36C;
   margin-bottom: 10%;
@@ -303,4 +312,9 @@ body {
 .grape__img--leaf {
   width: 25%;
   transform: translateY(-60%);
+}
+
+#grape img{
+  display: block;
+    margin-left: auto;
 }
