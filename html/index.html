@@ -1,13 +1,97 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="/css/index.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOP画面</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
 
+</head>
 <body>
+    <div id="header"></div>
+
+  <section class="morino-kuni">
+        <div class="morino-kuni-content">
+        <div class="morino-kuni-title">
+            <h1>EDEL WEIN support</h1>
+        </div>
+
+        <div class="morino-kuni-link">
+            <a href="#">ガラス工房森のくに</a>
+            <a href="#">レストランベルンドルフ</a>
+            <a href="#">ホテルベルンドルフ</a>
+        </div>
+    </div>
+  </section>
+  
+    <p class="morino-kuni-address">
+        所在地：〒028-3203   岩手県花巻市大迫町 大迫10-16-1
+    </p>
+
+    
+
+     <img src="../img/top/line.png" alt="線" class="section-line">
+
+
+</section>
+
+<section class="news-wrapper">
+    <div class="news-box">
+
+        <!-- 左：タイトル ＆ ボタン -->
+        <div class="news-left">
+            <h2 class="news-title">最新情報</h2>
+            <a href="#" class="news-btn">一覧を見る ></a>
+        </div>
+
+        <!-- 右：カード4つ -->
+        <div class="news-right">
+            <div class="news-list">
+
+    <a href="#" class="news-card card1">
+    <img src="../img/top/glass.png">
+    <div class="news-card-content">
+        <h3>出張体験やってます！</h3>
+        <p>ガラス工房森のくに</p>
+    </div>
+    <div class="news-card-footer"></div>
+  </a>
+
+<a href="#" class="news-card card2">
+    <img src="../img/top/restaurant.png">
+    <div class="news-card-content">
+        <h3>期間限定メニュー登場！</h3>
+        <p>レストランベルンドルフ</p>
+    </div>
+    <div class="news-card-footer"></div>
+  </a>
+
+<a href="#" class="news-card card3">
+    <img src="../img/top/hotel.png">
+    <div class="news-card-content">
+        <h3>別館完成！</h3>
+        <p>ホテルベルンドルフ</p>
+    </div>
+    <div class="news-card-footer"></div>
+</a>
+
+<a href="#" class="news-card card4">
+    <img src="../img/top/hotel.png">
+    <div class="news-card-content">
+        <h3>別館完成！</h3>
+        <p>ホテルベルンドルフ</p>
+    </div>
+    <div class="news-card-footer"></div>
+</a>
+    </div>
+</section>
+
+ <div id="grape">
+      <img class="grape__img grape__img--fruit" src="/img/index/ぶどう.png" alt="">
+    </div>
+   
   <main class="page">
     <section class="frame-group">
       <div class="frame frame--top-left">
@@ -76,6 +160,17 @@
       <img class="grape__img grape__img--fruit" src="/aseets/images/top/ぶどう.png" alt="">
       <img class="grape__img grape__img--leaf" src="/aseets/images/top/ぶどうの葉.png" alt="">
     </div>
+    
+     <script>
+    // header.htmlを読み込んで#headerに挿入
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      })
+      .catch(err => console.error(err));
+      </script>
+
 
   </main>
 </body>
