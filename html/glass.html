@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ガラス体験工房 森のくに</title>
+    <link rel="stylesheet" href="../css/glass.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div id="header"></div>
+
+       <section class="morino-kuni">
+        <img src="../img/glass/TOP.png" class="morino-kuni-bg">
+        <div class="morino-kuni-content">
+        <div class="morino-kuni-title">
+            <p>ガラス体験工房 森のくに</p>
+        </div>
+
+        <div class="morino-kuni-link">
+            <h1>自分で創るきらめく思い出
+              <br>体験してみませんか</h1>
+        </div>
+    </div>
+  </section>
+
+   <p class="morino-kuni-address">
+        営業時間：9:00〜17:00(最終受付16:00) 定休日：火曜日(祝祭日は営業)
+        TEL：0198-48-3009 岩手県花巻市大迫町10-45-1
+    </p>
+
+    <img src="../img/top/line.png" alt="線" class="section-line">
+
+
+</section>
+
+<section class="news-wrapper">
+    <div class="news-box">
+
+        <!-- 左：タイトル ＆ ボタン -->
+        <div class="news-left">
+            <h2 class="news-title">最新情報</h2>
+            <a href="#" class="news-btn">一覧を見る ></a>
+        </div>
+
+        <!-- 右：カード4つ -->
+        <div class="news-right">
+            <div class="news-list">
+
+    <a href="#" class="news-card card1">
+    <img src="../img/glass/出張.png">
+    <div class="news-card-content">
+        <h3>出張体験やってます！</h3>
+        <p>ガラス工房森のくに</p>
+    </div>
+    <div class="news-card-footer"></div>
+  </a>
+
+<a href="#" class="news-card card2">
+    <img src="../img/glass/出張.png">
+    <div class="news-card-content">
+        <h3>出張体験やってます！</h3>
+        <p>ガラス体験工房森のくに</p>
+    </div>
+    <div class="news-card-footer"></div>
+  </a>
+
+<a href="#" class="news-card card3">
+    <img src="../img/glass/出張.png">
+    <div class="news-card-content">
+        <h3>出張体験やってます！</h3>
+        <p>ガラス体験工房森のくに</p>
+    </div>
+    <div class="news-card-footer"></div>
+</a>
+
+<a href="#" class="news-card card4">
+    <img src="../img/glass/出張.png">
+    <div class="news-card-content">
+        <h3>出張体験やってます！</h3>
+        <p>ガラス体験工房森のくに</p>
+    </div>
+    <div class="news-card-footer"></div>
+</a>
+    </div>
+</section>
+<section class="intro-section">
+  <div class="intro-wrapper">
+
+    <!-- 左：画像＋文章 -->
+    <div class="intro-left">
+      <img src="../img/glass/ガラス体験工房様子.png" class="intro-img">
+
+      <div class="intro-paragraph">
+
+        <p>
+          私たちのガラス体験工房では、職人の手によって一つひとつ丁寧に作られた<br>
+          <a href="#">美しいガラス作品</a> を提供しています。<br>
+          豊かな自然と四季折々の風景にインスパイアされたデザインは、<br>
+          光を受けてさまざまな表情を見せる芸術品です。
+        </p>
+
+        <p>
+          ガラスの透明感と色彩の繊細な調和を楽しむことができる私たちの作品は、<br>
+          日常に彩りと癒しをもたらします。
+        </p>
+
+        <p>
+          制作過程で生まれる繊細な気泡や模様は、
+          <a href="#">世界に一つだけ</a> の個性を持ち、<br>
+          手に取ると職人のこだわりと情熱を感じていただけます。<br>
+          私たちの工房では、見学や体験教室も開催しており、
+          自分だけのオリジナル<br>作品を作る喜びも味わうことができます。
+        </p>
+
+        <p>
+          特別な贈り物や自分へのご褒美に、手作りのガラス作品をぜひお選びください。<br>
+          <a href="#">ここでしか手に入らない</a>、光と色の芸術を通して、
+          心に残るひとときをお届けします。<br>
+        </p>
+        <p>
+          皆さまのお越しを心よりお待ちしております。
+        </p>
+
+      </div>
+    </div>
+
+<div class="right-copy-wrapper">
+   <img src="../img/glass/透過ビー玉 3.png" class="glass-ball">
+   <img src="../img/glass/文字.png" class="copy-text">
+   <img src="../img/glass/三角形.png" class="copy-triangle">
+</div>
+  </div>
+</section>
+
+<a href="https://example.com" target="_blank">
+<img src="../img/glass/shopping.png" class="shop-banner">
+</a>
+
+    <script>
+    // header.htmlを読み込んで#headerに挿入
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      })
+      .catch(err => console.error(err));
+      </script>
+</body>
+</html>
