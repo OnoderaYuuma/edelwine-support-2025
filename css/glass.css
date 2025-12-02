@@ -1,3 +1,4 @@
+
 body {
    font-family: "Sawarabi Mincho", serif;
    background: url(../img/top/background.png);
@@ -295,4 +296,439 @@ a {
   margin: 20px auto;     /* 上下余白＋中央寄せ */
   width: 75%;            /* 横を大きく（バナーらしく） */
   height: 120%;         /* ← 縦を短くして細長く */
+=======
+@charset "utf-8";
+/*画面幅*/
+html, body {  
+  overflow-x: hidden;
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* タイトルデザイン */
+#glass .heading .title-block {
+    width: 100%;
+    margin: 2% 0;
+}
+
+/* 左寄せタイトル */
+#glass .heading .title-block h3 {
+    font-size: 220%;
+    text-align: left;
+    margin-left: 12%;
+}
+
+/* 菱形＋横線 */
+#glass .heading .arrow-line {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 9%;
+    margin-top: -3%;
+}
+
+/* 菱形 */
+#glass .heading .diamond {
+    width: 2%;
+    aspect-ratio: 1 / 1;
+    /* background: #C4F6FA; */
+    transform: rotate(45deg);
+}
+
+/* 横線 */
+#glass .heading .line {
+    width: 30%;
+    height: 0.5vw;      
+    /* background: #C4F6FA; */
+}
+
+/* 各項目のカラー */
+/* ▼ 吹きガラス */
+.heading.blown .diamond,
+.heading.blown .line {
+    background: #C4F6FA;
+}
+
+/* ▼ サンドブラスト */
+.heading.sandblast .diamond,
+.heading.sandblast .line {
+    background: #FFCFB5;
+}
+
+/* ▼ フュージング */
+.heading.glass-fusing-heading .diamond,
+.heading.glass-fusing-heading .line {
+    background: #B4FFB7;
+}
+
+/* ▼ トンボ玉 */
+.heading.tombo-heading .diamond,
+.heading.tombo-heading .line {
+    background: #F0C3FF;
+}
+
+#glass .section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+}
+
+#glass .section-title::before,
+#glass .section-title::after {
+  content: "";
+  flex-grow: 1;
+  border-top: 5px double #B8A36C;
+}
+
+#glass .heading__icon{
+    width: 30px;
+    height: 30px;
+    background-color: #C4F6FA;
+    transform: rotate(45deg);
+}
+
+#glass .heading {
+    display: flex;
+}
+
+/*吹きガラスコンテンツ*/
+#glass .blownglass {
+  width: 85%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #B8A36C;
+  margin-bottom: 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#glass .blownglass_contents {
+  margin-left: 5%;
+  font-size: 15px;
+}
+
+#glass .title-sub {
+  font-size: 20px;
+}
+
+
+/* グラス・一輪挿し・小鉢・ぐい吞み類・モールドロックグラス */
+#glass .glass {
+    display: flex;
+}
+#glass #glass-title {
+  font-size: 18px;
+}
+
+#glass .glass_image{
+  margin-left: 55%;
+  margin-top: -5%;
+}
+
+#glass #glass-detail {
+  margin-left: 2%;
+  margin-top: -1%;
+}
+
+#glass #glass-time {
+  line-height: 2;   /* 行間 */
+  margin: -1%;
+  margin-left: 2%;
+}
+/* ミニグラス */
+#glass .mini-glass {
+    display: flex;
+}
+
+#glass .mini-glass_image {
+  margin-left: 30%;
+  margin-top: -2%;
+}
+/* ミニ一輪挿し */
+#glass .single-flower-vase {
+  display: flex;
+}
+
+#glass .single-flower-vase__image {
+  margin-left: 57%;
+  margin-top: -2%;
+}
+
+/* 箸置き */
+#glass .chopstick-rest {
+  display: flex;
+  margin-bottom: 3%;
+}
+
+#glass .chopstick-rest_image1 {
+  width: 18%;
+  margin-left: 45%;
+  margin-top: -3%;
+}
+
+#glass .chopstick-rest_image2 {
+  width: 18%;
+  margin-left: 2%;
+  margin-top: -3%;
+}
+
+/* サンドブラスト*/
+#glass .heading.sandblast {
+  margin-top: -9%;
+}
+#glass .sandblasting {
+  width: 85%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #B8A36C;
+  margin-bottom: 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#glass .sandblasting-contents {
+  font-size: 14px;
+}
+
+#glass #here {
+  color: #1B24FF;
+}
+#glass #phone {
+  color: #1B24FF;
+}
+
+#glass .sandblasting-remarks {
+  display: flex;
+}
+
+#glass .sandblasting-image1 {
+  width: 15%;
+  margin-left: 8%;
+  margin-top: -4%;
+  margin-bottom: 3%;
+}
+
+#glass .sandblasting-image2 {
+  width: 15%;
+  margin-left: 2%;
+  margin-top: -4%;
+  margin-bottom: 3%;
+}
+
+#glass #sandblasting-detail {
+  margin-left: 5%;
+}
+
+#glass #sandblasting-time {
+  line-height: 2;   /* 行間 */
+  margin-left: 5%;
+}
+
+/*フュージング*/
+#glass .heading.glass-fusing-heading {
+  margin-top: -9%;
+}
+#glass .fusing {
+  width: 85%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #B8A36C;
+  margin-bottom: 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#glass .fusing-contents {
+   font-size: 14px;
+}
+
+#glass #fusing-details {
+  line-height: 2;   /* 行間 */
+}
+
+#glass #glass-variety {
+  text-decoration: underline;
+}
+
+#glass #kiln-firing {
+  text-decoration: underline;
+}
+
+#glass #venetian-glass {
+  text-decoration: underline;
+}
+
+#glass #more-info-link {
+  text-decoration: underline;
+}
+
+#glass #contact-phone {
+  color: #1B24FF;
+}
+
+#glass .fusing-info-block {
+  display: flex;
+}
+
+#glass .fusing-image1 {
+  width: 15%;
+  margin-left: 22%;
+  margin-top: -3%;
+  margin-bottom: 2%;
+}
+
+#glass .fusing-image2{
+  width: 15%;
+  margin-left: 2%;
+  margin-top: -3%;
+  margin-bottom: 2%;
+}
+
+#glass .fusing-contents {
+  margin-left: 5%;
+}
+
+/*トンボ玉*/
+#glass .heading.tombo-heading {
+  margin-top: -9%;
+}
+
+#glass .tombodama {
+  width: 85%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #B8A36C;
+  margin-bottom: 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#glass .tombodama-contents {
+  margin-left: 5%;
+  font-size: 14px;
+}
+
+#glass .tombodama-info {
+  display: flex;
+  line-height: 2;   /* 行間 */
+}
+
+#glass .tombodama-images1{
+  width: 15%;
+  margin-left: 40%;
+  margin-top: -7%;
+  margin-bottom: 2%;
+}
+#glass .tombodama-images2{
+  width: 15%;
+  margin-left: 2%;
+  margin-top: -7%;
+  margin-bottom: 2%;
+}
+
+#glass .reservation-notice {
+  display: flex;
+  margin-left: 9%;
+  margin-top: -8%;
+}
+
+#glass .info-deco-image1 {
+  width: 30%;
+  margin-left: 18%;
+}
+
+/* サンドブラスト */
+#glass .sandblast-content {
+  width: 85%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #B8A36C;
+  margin-bottom: 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#glass .sandblast-title {
+  margin-left: 12%;
+  margin-top: 5%;
+}
+#glass .sandblast-details {
+  margin-left: 9%;
+}
+
+#glass .sandblast-info-item {
+  display: flex;
+  line-height: 2;   /* 行間 */
+}
+
+#glass #link-tel {
+  color: #1B24FF;
+}
+
+#glass .sandblast-image {
+  width: 25%;
+  margin-left: 25%;
+  margin-top: -5%;
+  margin-bottom: 2%;
+}
+
+/* 吹きガラス */
+#glass .glassblowing-wrapper {
+  width: 85%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #B8A36C;
+  margin-bottom: 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#glass .blownglass-title {
+  margin-left: 12%;
+}
+
+#glass .glassblowing-content {
+  margin-left: 9%;
+}
+
+#glass .glassblowing-details {
+  display: flex;
+  line-height: 2;   /* 行間 */
+}
+
+#glass #tel-highlight {
+  color: #1B24FF;
+}
+
+#glass .glassblowing-image {
+  width: 25%;
+  margin-left: 25%;
+  margin-top: -3%;
+  margin-bottom: 2%;
+}
+
+#glass .blownglass-boxs {
+  margin-top: -5%;
+}
+
+#glass .info-deco-image2 {
+  width: 25%;
+  margin-top: -11%;
+  margin-left: 2%;
 }
