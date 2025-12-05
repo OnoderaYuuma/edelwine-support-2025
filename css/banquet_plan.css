@@ -1,0 +1,54 @@
+body {
+  /* Typographic */
+  font-family: "Sawarabi Mincho", serif;
+  /* Visual */
+  background-image: url(../assets/images/banquet_plan/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.main__ttl {
+  /* Positioning */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Box Model */
+  margin-bottom: 100px;
+  /* Typographic */
+  font-size: 65px;
+}
+
+.main__ttl::before,
+.main__ttl::after {
+  /* Positioning */
+  display: block;
+  flex: 1;
+  /* Box Model */
+  height: 10px;
+  /* Visual */
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: 100% 100%;
+  /* Other */
+  content: "";
+}
+
+.main__ttl::before {
+  background-image: url(../assets/images/banquet_plan/ttl_left.png);
+  margin-right: 30px;
+}
+
+.main__ttl::after {
+  background-image: url(../assets/images/banquet_plan/ttl_right.png);
+  margin-left: 30px;
+}
+
+.move_restaurant {
+    /* Typographic */
+    font-size: 20px;
+    /* Visual */
+    text-decoration: none;
+    color: #000000;
+}
