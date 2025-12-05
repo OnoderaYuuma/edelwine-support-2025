@@ -1,0 +1,768 @@
+
+body {
+   font-family: "Sawarabi Mincho", serif;
+   background: url(../img/top/background.png);
+}
+
+/* ========= トップセクション ========== */
+.morino-kuni {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 背景画像 */
+.morino-kuni img {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+/* 文字コンテンツ（左上へ） */
+.morino-kuni-content {
+  grid-area: 1 / 1;    /* ← 画像と重ねる */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  /* ← 上揃え */
+  align-items: flex-start;      /* ← 左揃え */
+  padding: 4% 5%;               /* 左上への位置調整 */
+  color: #fff;
+}
+
+/* タイトル */
+.morino-kuni-title p {
+  font-size: 24px;
+  margin: 0 0 12px 0;
+  font-family: "Jacques Francois", serif;
+}
+
+.morino-kuni-link {
+  display: flex;
+  justify-content: center; /* 横中央 */
+  align-items: center;     /* 縦中央 */
+  height: 100%;            /* 親の高さいっぱいに */
+  width: 100%;
+}
+
+/* キャッチコピー */
+.morino-kuni-link h1 {
+
+  font-size: 62px;
+  margin: 0;
+  font-family: "Sawarabi Mincho", serif;
+  text-align: center; 
+}
+
+
+
+
+.morino-kuni-link a {
+  color: black;
+  text-decoration: none;
+  padding: 6%;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* ホバー時の背景変化 */
+.morino-kuni-link a:hover {
+  color: #000000;  
+  font-size: 20px;    
+}
+
+.morino-kuni-address {
+  margin-top: 4%;        /* 画像との余白 */
+  margin-bottom: 4%;     /* 次のセクションとの余白 */
+  font-size: 16px;
+  font-family: "Sawarabi Mincho", serif;
+  color: #333;
+  text-align: center;
+}
+
+.section-line {
+  width: 100%;       /* 横幅いっぱいに */
+  display: block;
+}
+
+/* ▼ 全体（白い枠） */
+.news-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.news-box {
+    background: #ffffff;
+    width: 94%;
+    padding: 4% 3%;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    display: flex;
+    border: 1px solid #B8A36C;
+}
+
+/* ▼ 左側（最新情報タイトルとボタン） */
+.news-left {
+    width: 20%;
+    padding-top: 4%;
+    padding-left: 2%;
+}
+
+.news-title {
+    font-size: 36px;
+    font-family: "Sawarabi Mincho", serif;
+    margin-bottom: 20%;
+}
+
+.news-btn {
+    display: inline-block;
+    padding: 4.5% 10.5%;
+    border: 1px solid #B8A36C;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #333;
+    background: #fff;
+    font-size: 17px;
+}
+
+.news-btn:hover {
+    background: #f5f5f5;
+}
+
+/* ▼ 右側（カード部分） */
+.news-right {
+    width: 80%;
+}
+/* カード4つ横並び（小さく） */
+.news-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    
+}
+
+.news-card {
+    width: calc(25% - 12px);
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column; /* ← テキスト部分を伸ばせるようにする */
+    text-decoration: none;      /* 下線なくす */
+    color: inherit;             /* 文字色そのまま */
+    cursor: pointer;
+}
+
+.news-card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* テキスト領域を伸ばすための全体ラッパー */
+.news-card-content {
+    flex-grow: 1;               /* ← テキスト部分を縦に伸ばす */
+    padding: 3% 4% 4%;    /* ← ゆとりを持たせる */
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+/* タイトル */
+.news-card h3 {
+    font-size: 14px;
+    margin-bottom: 2%; /* 広めにとる */
+    margin-top: 6%;
+    margin-left: 7%;
+}
+
+/* 店名（下の方に配置したいのでmargin調整） */
+.news-card p {
+    font-size: 12px;
+    color: #555;
+    margin-top: 19%;
+    text-align: right;
+    margin-right: 10%;
+
+}
+
+/* 下側に淡い色の帯 */
+.news-card-footer {
+    height: 16px;
+    background: #dff7fa;  /* 画像の例に似た淡い水色 */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* カードごとに色変更 */
+.card1 .news-card-footer {
+    background: #dff7fa; /* 水色 */
+}
+
+.card2 .news-card-footer {
+    background: #dff7fa; /* オレンジ系 */
+}
+
+.card3 .news-card-footer {
+    background: #dff7fa; /* 紫系 */
+}
+
+.card4 .news-card-footer {
+    background: #dff7fa; /* 緑系 */
+}
+
+.morino-kuni-link p.link-text {
+  display: block;      /* a と同じブロック化 */
+  width: 100%;         /* a と同じ幅にする */
+  margin: 0;
+  padding: 0.3rem 0;   /* 必要なら余白 */
+  font-size: 1rem;     /* 必要なら調整 */
+}
+
+.intro-section {
+  width: 100%;
+  padding: 50px 0;
+}
+
+.intro-wrapper {
+  display: flex;
+  gap: 40px;
+}
+
+/* 左側 */
+.intro-left {
+  width: 60%;
+}
+
+.intro-img {
+  width: 70%;
+  max-width: 100%;
+  height: auto;
+  margin-left: 5%;
+}
+
+.intro-paragraph p {
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 20px;
+  margin-left: 5%;
+  margin-top: 3%;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+}
+
+.right-copy-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 横位置を中央揃え */        /* 画像の隙間 */
+  width: 35%;          /* 左と右のバランス調整 */
+}
+
+.glass-ball {
+  width: 105%;   /* ←画像を小さく */
+  height: auto;
+  margin-top: -25%;
+}
+
+/* ────────────────
+   ② 文字の画像
+──────────────── */
+.copy-text {
+  width: 70%;     /* 可変サイズで自然にフィット */
+  height: auto;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4)); /* 影を付ける */
+  margin-top: -16%;
+  margin-bottom: 10%;
+}
+
+/* ────────────────
+   ③ 三角形（縦を短く）
+──────────────── */
+.copy-triangle {
+  width: 88%;      /* 横幅調整（好みで変えられる） */
+  height: auto;
+   margin-top: -95%;
+}
+a {
+  color: #00B3FF;
+  text-decoration: none;
+}
+
+.shop-banner {
+  display: block;
+  margin: 20px auto;     /* 上下余白＋中央寄せ */
+  width: 75%;            /* 横を大きく（バナーらしく） */
+  height: 120%;         /* ← 縦を短くして細長く */
+
+}
+
+/*画面幅*/
+html, body {  
+  overflow-x: hidden;
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* タイトルデザイン */
+#glass .heading .title-block {
+    width: 100%;
+    margin: 2% 0;
+}
+
+/* 左寄せタイトル */
+#glass .heading .title-block h3 {
+    font-size: 220%;
+    text-align: left;
+    margin-left: 12%;
+}
+
+/* 菱形＋横線 */
+#glass .heading .arrow-line {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 9%;
+}
+
+/* 菱形 */
+#glass .heading .diamond {
+    width: 2%;
+    aspect-ratio: 1 / 1;
+    /* background: #C4F6FA; */
+    transform: rotate(45deg);
+}
+
+/* 横線 */
+#glass .heading .line {
+    width: 30%;
+    height: 0.5vw;      
+    /* background: #C4F6FA; */
+}
+
+/* 各項目のカラー */
+/* ▼ 吹きガラス */
+.heading.blown .diamond,
+.heading.blown .line {
+    background: #C4F6FA;
+}
+
+/* ▼ サンドブラスト */
+.heading.sandblast .diamond,
+.heading.sandblast .line {
+    background: #FFCFB5;
+}
+
+/* ▼ フュージング */
+.heading.glass-fusing-heading .diamond,
+.heading.glass-fusing-heading .line {
+    background: #B4FFB7;
+}
+
+/* ▼ トンボ玉 */
+.heading.tombo-heading .diamond,
+.heading.tombo-heading .line {
+    background: #F0C3FF;
+}
+
+#glass .section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+#glass .section-title::before,
+#glass .section-title::after {
+  content: "";
+  flex-grow: 1;
+  border-top: 5px double #B8A36C;
+}
+
+#glass .heading__icon{
+    width: 30px;
+    height: 30px;
+    background-color: #C4F6FA;
+    transform: rotate(45deg);
+}
+
+#glass .heading {
+    display: flex;
+}
+
+/*吹きガラスコンテンツ*/
+#glass .blownglass {
+  width: 85%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #B8A36C;
+  margin-bottom: 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#glass .blownglass_contents {
+  margin-left: 5%;
+  font-size: 15px;
+}
+
+#glass .title-main{
+  margin-top: 3%;
+}
+
+#glass .title-sub {
+  font-size: 20px;
+}
+
+
+/* グラス・一輪挿し・小鉢・ぐい吞み類・モールドロックグラス */
+#glass .glass {
+    display: flex;
+}
+#glass #glass-title {
+  font-size: 18px;
+}
+
+#glass .glass_image{
+  margin-left: 56.5%;
+  margin-top: -2%;
+}
+
+#glass #glass-detail {
+  margin-left: 2%;
+}
+
+#glass #glass-time {
+  line-height: 2;   /* 行間 */
+  margin-left: 2%;
+}
+/* ミニグラス */
+#glass .mini-glass {
+    display: flex;
+}
+
+#glass .mini-glass_image {
+  margin-left: 31%;
+}
+/* ミニ一輪挿し */
+#glass .single-flower-vase {
+  display: flex;
+}
+
+#glass .single-flower-vase__image {
+  margin-left: 59%;
+}
+
+/* 箸置き */
+#glass .chopstick-rest {
+  display: flex;
+  margin-bottom: 3%;
+}
+
+#glass .chopstick-rest_image1 {
+  width: 18%;
+  margin-left: 45%;
+  margin-top: -3%;
+}
+
+#glass .chopstick-rest_image2 {
+  width: 18%;
+  margin-left: 2%;
+  margin-top: -3%;
+}
+
+/* サンドブラスト*/
+#glass .heading.sandblast {
+  margin-top: -8%;
+}
+#glass .sandblasting {
+  width: 85%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #B8A36C;
+  margin-bottom: 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#glass .sandblasting-contents {
+  font-size: 14px;
+  margin-top: 2%;
+}
+
+#glass .product-experience {
+  color: #000;
+  text-decoration: underline;
+}
+
+#glass #here {
+  color: #1B24FF;
+}
+#glass #phone {
+  color: #1B24FF;
+}
+
+#glass .sandblasting-remarks {
+  display: flex;
+  margin-top: 3%;
+}
+
+#glass .sandblasting-image1 {
+  width: 17%;
+  margin-left: 4%;
+  margin-top: -5%;
+  margin-bottom: 3%;
+}
+
+#glass .sandblasting-image2 {
+  width: 17%;
+  margin-left: 2%;
+  margin-top: -5%;
+  margin-bottom: 3%;
+}
+
+#glass #sandblasting-detail {
+  margin-left: 5%;
+  line-height: 1.5;   /* 行間 */
+}
+
+#glass #sandblasting-time {
+  line-height: 2;   /* 行間 */
+  margin-left: 5%;
+  margin-top: 2%;
+  white-space: nowrap; /*改行しない*/
+}
+
+/*フュージング*/
+#glass .heading.glass-fusing-heading {
+  margin-top: -8%;
+}
+
+#glass .fusing {
+  width: 85%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #B8A36C;
+  margin-bottom: 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#glass .fusing-contents {
+   font-size: 14px;
+}
+
+#glass #fusing-details {
+  line-height: 2;   /* 行間 */
+  white-space: nowrap; /*改行しない*/
+}
+
+#glass #glass-variety {
+  text-decoration: underline;
+  color: #000;
+}
+
+#glass #kiln-firing {
+  text-decoration: underline;
+  color: #000;
+}
+
+#glass #venetian-glass {
+  text-decoration: underline;
+  color: #000;
+}
+
+#glass #more-info-link {
+  text-decoration: underline;
+  color: #000;
+}
+
+#glass #contact-phone {
+  color: #1B24FF;
+}
+
+#glass .fusing-info-block {
+  display: flex;
+  margin-top: 3%;
+}
+
+#glass #fusing-description {
+  margin-top: 2%;
+  line-height: 1.5;   /* 行間 */
+}
+
+#glass .fusing-image1 {
+  width: 18%;
+  margin-left: 15%;
+  margin-top: -7%;
+  margin-bottom: 2%;
+}
+
+#glass .fusing-image2{
+  width: 18%;
+  margin-left: 2%;
+  margin-top: -7%;
+  margin-bottom: 2%;
+}
+
+#glass .fusing-contents {
+  margin-left: 5%;
+}
+
+/*トンボ玉*/
+#glass .heading.tombo-heading {
+  margin-top: -8%;
+}
+
+#glass .tombodama {
+  width: 85%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #B8A36C;
+  margin-bottom: 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#glass .tombodama-contents {
+  margin-left: 5%;
+  margin-top: 3%;
+  font-size: 14px;
+  line-height: 1.5;   /* 行間 */
+}
+
+#glass .tombodama-info {
+  display: flex;
+  line-height: 2;   /* 行間 */
+  margin-top: 3%;
+}
+
+#glass .tombodama-images1{
+  width: 17%;
+  margin-left: 40%;
+  margin-top: -9%;
+  margin-bottom: 2%;
+}
+#glass .tombodama-images2{
+  width: 17%;
+  margin-left: 2%;
+  margin-top: -9%;
+  margin-bottom: 2%;
+}
+
+#glass .reservation-notice {
+  display: flex;
+  margin-left: 9%;
+  margin-top: -7%;
+  line-height: 1.5;   /* 行間 */
+}
+
+#glass .info-deco-image1 {
+  width: 30%;
+  margin-left: 18%;
+}
+
+/* サンドブラスト */
+#glass .sandblast-content {
+  width: 85%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #B8A36C;
+  margin-bottom: 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#glass .sandblast-title {
+  margin-left: 12%;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+#glass .sandblast-details {
+  margin-left: 9%;
+  margin-top: 2%;
+  line-height: 1.5;
+}
+
+#glass .sandblast-info-item {
+  display: flex;
+  line-height: 2;   /* 行間 */
+  margin-top: 3%;
+}
+
+#glass #link-tel {
+  color: #1B24FF;
+}
+
+#glass .sandblast-image {
+  width: 25%;
+  margin-left: 25%;
+  margin-bottom: 2%;
+  margin-top: -7%;
+}
+
+/* 吹きガラス */
+#glass .glassblowing-wrapper {
+  width: 85%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #B8A36C;
+  margin-bottom: 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#glass .blownglass-title {
+  margin-left: 12%;
+  margin-bottom: 2%;
+}
+
+#glass .glassblowing-content {
+  margin-left: 9%;
+  margin-top: 2%;
+}
+
+#glass .glassblowing-details {
+  display: flex;
+  line-height: 2;   /* 行間 */
+  margin-top: 3%;
+}
+
+#glass #tel-highlight {
+  color: #1B24FF;
+}
+
+#glass .glassblowing-image {
+  width: 25%;
+  margin-left: 25%;
+  margin-bottom: 2%;
+  margin-top: -5%;
+}
+
+#glass .blownglass-boxs {
+  margin-top: -5%;
+}
+
+#glass .info-deco-image2 {
+  width: 25%;
+  margin-top: -11%;
+  margin-left: 2%;
+}

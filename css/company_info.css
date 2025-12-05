@@ -1,0 +1,104 @@
+body {
+  /* Typographic */
+  font-family: "Sawarabi Mincho", serif;
+  /* Visual */
+  background-image: url(../assets/images/company_info/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.main__ttl {
+  /* Positioning */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Box Model */
+  margin-bottom: 100px;
+  /* Typographic */
+  font-size: 65px;
+}
+
+.main__ttl::before,
+.main__ttl::after {
+  /* Positioning */
+  display: block;
+  flex: 1;
+
+  /* Box Model */
+  height: 10px;
+
+  /* Visual */
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: 100% 100%;
+
+  /* Other */
+  content: "";
+}
+
+.main__ttl::before {
+  background-image: url(../assets/images/company_info/ttl_left.png);
+  margin-right: 30px;
+}
+
+.main__ttl::after {
+  background-image: url(../assets/images/company_info/ttl_right.png);
+  margin-left: 30px;
+}
+
+.spirit, .philosophy {
+  /* Box Model */
+  margin: 0 auto;
+  width: 70%;
+  max-width: 954px;
+}
+
+.spirit__ttl, .philosophy__ttl {
+  /* Typographic */
+  font-family: "Shippori Mincho B1", serif;
+  font-size: 32px;
+}
+
+.spirit__ttl::before, .philosophy__ttl::before {
+  /* Typographic (装飾文字) */
+  content: "◆";
+  /* Box Model */
+  margin-right: 10px;
+}
+
+.spirit__p, .philosophy__p {
+  /* Box Model */
+  margin-left: 93px;
+  /* Typographic */
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 20px;
+}
+
+.info__table {
+  /* Box Model */
+  margin: 56px auto 0;
+  width: 55%;
+  max-width: 910px;
+  /* Typographic */
+  text-align: left;
+  font-size: 20px;
+}
+
+.info__table, .info__th, .info__td {
+  /* Box Model */
+  padding: 10px 20px;
+  border: 2px solid #B8A36C;
+  border-collapse: collapse;
+}
+
+.info__th {
+  /* Visual */
+  background-color: #d9d9d9;
+}
+
+.info__td {
+  /* Visual */
+  background-color: #ffffff;
+}
