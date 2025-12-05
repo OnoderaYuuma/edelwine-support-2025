@@ -1,0 +1,72 @@
+@charset "utf-8";
+#groupmenu .section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+}
+
+#groupmenu .section-title::before,
+#groupmenu .section-title::after {
+  content: "";
+  flex-grow: 1;
+  border-top: 5px double #B8A36C;
+}
+
+/* メニュー全体 */
+.menu-wrapper {
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+/* 2列並び */
+.menu-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+/* 各メニュー枠 */
+.menu-item {
+    width: 45%;
+    text-align: center;
+    font-family: "Hiragino Mincho ProN", "MS Mincho", serif;
+}
+
+.menu-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.price {
+    margin-left: 5px;
+    font-size: 1.1rem;
+}
+
+.note {
+    font-size: 0.9rem;
+}
+
+.menu-item p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.menu-item img {
+    width: 230px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* 下部説明文 */
+.menu-note {
+    text-align: center;
+    font-size: 0.85rem;
+    margin-top: 40px;
+    line-height: 1.6;
+}
+
