@@ -14,8 +14,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Box Model */
-  margin-bottom: 100px;
   /* Typographic */
   font-size: 65px;
 }
@@ -46,9 +44,144 @@ body {
 }
 
 .move_restaurant {
-    /* Typographic */
-    font-size: 20px;
-    /* Visual */
-    text-decoration: none;
-    color: #000000;
+  /* Positioning */
+  display: block;
+  text-align: left;
+  /* Box Model */
+  margin: 39px 56px 0;
+  /* Typographic */
+  font-size: 20px;
+  /* Visual */
+  text-decoration: none;
+  color: #000000;
+}
+
+.banquet__inner {
+  /* Box Model */
+  width: 88%;
+  max-width: 1270px;
+  margin: 0 auto;
+}
+
+.banquet_intro__lead {
+  /* Positioning */
+  display: block;
+  text-align: center;
+  /* Box Model */
+  margin: 76px 0 45px;
+  /* Typographic */
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 29px;
+  line-height: 1.34;  /* pタグのデフォmarginを消すこと */
+  /* Visual */
+  color: #8a6854;
+  background-color: #ffffff;
+}
+
+.banquet_intro__lead-hr {
+  border: none;
+  border-top: 1px solid #b8a36c;
+  border-bottom: 1px solid #B8A36C;
+  height: 6px;
+}
+
+.banquet_intro__note {
+  /* Positioning */
+  display: block;
+  text-align: center;
+  /* Typographic */
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 24px;
+  line-height: 1.4;
+  /* Visual */
+  color: #000000;
+}
+
+.banquet_rooms__ttl {
+  /* Positioning */
+  position: relative;
+  display: inline-block;
+  /* Box Model */
+  margin: 40px 0 36px 0;
+  padding-left: 32px;
+  /* Typographic */
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 32px;
+  border-bottom: 1px solid #b8a36c;
+  /* Visual */
+  color: #000000;
+}
+
+.banquet_rooms__ttl::before {
+  /* Positioning */
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  /* Box Model */
+  width: 6px;
+  height: 1.4em;
+  /* Typographic（装飾文字） */
+  content: "";
+  /* Visual */
+  background-color: #b8a36c;
+}
+
+.banquet_rooms__ttl::after {
+  /* Positioning */
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  /* Box Model */
+  width: 2px;
+  height: 1.4em;
+  /* Typographic（装飾文字） */
+  content: "";
+  /* Visual */
+  background-color: #b8a36c;
+}
+
+/* 部屋の写真並べるところ */
+.banquet_rooms__list {
+  /* Positioning */
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  /* Box Model */
+  width: 100%;
+}
+
+.banquet_rooms__room {
+  /* Box Model */
+  margin: 0;
+  width: 25.8%;
+}
+
+.banquet_rooms__room img {
+  /* Positioning */
+  display: block;
+  /* Box Model */
+  width: 100%;
+  height: auto;
+}
+/* ↑ここまで */
+
+.banquet_rooms__name {
+  /* Positioning */
+  display: block;
+  text-align: center;
+  /* Typographic */
+  margin-top: 20px;
+  font-size: 32px;
+}
+
+.banquet_rooms__address {
+  /* Positioning */
+  display: block;
+  text-align: center;
+  /* Box Model */
+  margin: 10px 0;
+  /* Typographic */
+  font-size: 20px;
 }
