@@ -67,28 +67,41 @@ body {
   /* Positioning */
   display: block;
   text-align: center;
+  position: relative;
   /* Box Model */
   margin: 76px 0 45px;
+  padding: 60px 120px;
   /* Typographic */
   font-family: "Sawarabi Mincho", serif;
   font-size: 29px;
-  line-height: 1.34;  /* pタグのデフォmarginを消すこと */
+  line-height: 1.34;
   /* Visual */
   color: #8a6854;
   background-color: #ffffff;
 }
 
-.banquet_intro__lead-hr {
-  border: none;
-  border-top: 1px solid #b8a36c;
-  border-bottom: 1px solid #B8A36C;
+.banquet_intro__lead::after {
+  /* Positioning */
+  display: block;
+  position: absolute;
+  /* Box Model */
+  bottom: 0;
+  left: 0;
+  width: 100%;
   height: 6px;
+  /* Typographic */
+  content: "";
+  border-top: 1px solid #b8a36c;
+  border-bottom: 1px solid #b8a36c;
 }
 
 .banquet_intro__note {
   /* Positioning */
-  display: block;
+  display: grid;
+  row-gap: 16px;
   text-align: center;
+  /* Box Model */
+  margin: 40px;
   /* Typographic */
   font-family: "Sawarabi Mincho", serif;
   font-size: 24px;
