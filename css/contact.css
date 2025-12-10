@@ -1,3 +1,101 @@
+@charset "utf-8";
+@charset "utf-8";
+
 body {
-    background-color: #f6edf1;
+  font-family: "Sawarabi Mincho", serif;
+  background-image: url(../img/top/background.png);
+}
+
+/* ----------------------------------
+ * 問い合わせページ
+ * ---------------------------------- */
+.inquiry__title {
+  font-size: 40px;
+  text-align: center;
+  color: #63173B;
+  margin: 3% 0;
+}
+
+.inquiry__divider {
+  border-top: 1px solid #c8ab75;
+  border-bottom: 1px solid #c8ab75;
+  height: 8px;
+  margin: 20px 0;
+}
+
+.inquiry__intro {
+  margin-left: 31%;
+  margin-top: 3%;
+}
+
+/* ----------------------------------
+ * フォーム
+ * ---------------------------------- */
+.inquiry__form {
+  width: 90%;
+  max-width: 450px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.form__label {
+  display: block;
+  margin: 8% 0 3%;
+  font-size: 14px;
+}
+
+.form__required {
+  background-color: #FF272B;
+  color: #fff;
+  padding: 2px 6px;
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+.form__input,
+.form__select,
+.form__textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #B8A36C;
+  font-size: 14px;
+  background-color: #fff;
+  box-sizing: border-box;
+  color: #868686;
+}
+
+.form__textarea {
+  height: 180px;
+}
+
+.form__select-wrapper {
+  position: relative;
+}
+
+.form__select-wrapper::after {
+  content: "▼";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 12px;
+  color: #666;
+}
+
+.form__select {
+  appearance: none;
+}
+
+.form__submit {
+  width: 50%;
+  display: block;
+  margin: 10% auto 0;
+  padding: 12px 0;
+  background-color: #FFD453;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #B8A36C;
 }
