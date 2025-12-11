@@ -1,15 +1,15 @@
-
 body {
   font-family: "Sawarabi Mincho", serif;
   background: url(../img/top/background.png);
 }
-.berundorf-text-link{
-    color: #880A45;
-    text-decoration: none;
+
+#berundorf-text-link {
+  color: #880A45;
+  text-decoration: none;
 }
 
 /* ========= トップセクション ========== */
-.berundorf-section {
+#berundorf-section {
   display: grid;
   width: 100%;
   height: 100%;
@@ -17,14 +17,14 @@ body {
 }
 
 /* 背景画像 */
-.berundorf-section img {
+#berundorf-section img {
   grid-area: 1 / 1;
   width: 100%;
   height: 100%;
 }
 
 /* 文字コンテンツ */
-.berundorf-content {
+#berundorf-content {
   grid-area: 1 / 1;
   display: flex;
   flex-direction: column;
@@ -35,14 +35,14 @@ body {
 }
 
 /* タイトル */
-.berundorf-title p {
+#berundorf-title p {
   font-size: 24px;
   margin: 0 0 16% 0;
   font-family: "Jacques Francois", serif;
 }
 
 /* キャッチコピー */
-.berundorf-copy {
+#berundorf-copy {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +50,7 @@ body {
   width: 100%;
 }
 
-.berundorf-copy h1 {
+#berundorf-copy h1 {
   font-size: 62px;
   margin: 0;
   font-family: "Sawarabi Mincho", serif;
@@ -58,7 +58,7 @@ body {
 }
 
 /* --- リンク --- */
-.berundorf-copy a {
+#berundorf-copy a {
   color: black;
   text-decoration: none;
   padding: 6%;
@@ -66,29 +66,30 @@ body {
   transition: 0.3s ease;
 }
 
-.berundorf-copy a:hover {
+#berundorf-copy a:hover {
   color: #000;
   font-size: 20px;
 }
 
 /* 住所 */
-.berundorf-address {
+#berundorf-address {
   margin-top: 4%;
   margin-bottom: 4%;
   font-size: 20px;
   font-family: "Sawarabi Mincho", serif;
-  color: #333;
+  color: #000000;
   text-align: center;
-  line-height: 1.5;
+  line-height: 2.0;
+  padding-left: 3%;   /* 左右に余白 */ 
 }
 
 /* 区切り線 */
-.section-line {
+#section-line {
   width: 100%;
   display: block;
 }
 
-/* ========= 最新情報（ほぼそのまま） ========== */
+/* ========= 最新情報 ========== */
 .berundorf-news-wrapper {
   width: 100%;
   display: flex;
@@ -185,33 +186,33 @@ body {
 
 .berundorf-news-card-footer {
   height: 16px;
-  background: #f4e9d8; /* レストラン向け暖色 */
+  background: #C12B7235;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
 /* ========= 紹介セクション ========== */
-.berundorf-intro-section {
+#berundorf-intro-section {
   width: 100%;
   padding: 50px 0;
 }
 
-.berundorf-intro-wrapper {
+#berundorf-intro-wrapper {
   display: flex;
   gap: 40px;
 }
 
-.berundorf-intro-left {
+#berundorf-intro-left {
   width: 60%;
 }
 
-.berundorf-intro-img {
+#berundorf-intro-img {
   width: 70%;
   max-width: 100%;
   margin-left: 5%;
 }
 
-.berundorf-intro-paragraph p {
+#berundorf-intro-paragraph p {
   font-family: "Sawarabi Mincho", serif;
   font-size: 20px;
   margin-left: 5%;
@@ -220,38 +221,39 @@ body {
   text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
 }
 
-.berundorf-copy-right {
+#berundorf-copy-right {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 35%;
 }
 
-.berundorf-ball {
+#berundorf-ball {
   width: 40%;
   height: auto;
   margin-top: -10%;
   margin-left: 50%;
 }
 
-.berundorf-copy-text {
+#berundorf-copy-text {
   width: 80%;
   height: auto;
   margin-top: -65%;
 }
 
-.berundorf-copy-triangle {
+#berundorf-copy-triangle {
   width: 88%;
   height: auto;
   margin-top: -135%;
 }
 
-.berundorf-banner {
+#berundorf-banner {
   display: block;
   margin: 20px auto;
   width: 75%;
   height: 120%;
 }
+
 html, body {  
   font-family: "Sawarabi Mincho", serif;
   font-weight: 400;
@@ -519,4 +521,5 @@ html, body {
     border-bottom: 1px solid #B8A36C;
     padding-bottom: 3px;
     display: inline-block;
+
 }
