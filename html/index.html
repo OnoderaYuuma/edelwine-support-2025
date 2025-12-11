@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body id="top">
     <div id="header"></div>
 
   <section class="morino-kuni">
@@ -160,18 +160,25 @@
       <img class="grape__img grape__img--fruit" src="/aseets/images/top/ぶどう.png" alt="">
       <img class="grape__img grape__img--leaf" src="/aseets/images/top/ぶどうの葉.png" alt="">
     </div>
+
+    <div id="footer"></div>
     
      <script>
     // header.htmlを読み込んで#headerに挿入
-    fetch("header.html")
+    fetch("./header.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("header").innerHTML = data;
       })
       .catch(err => console.error(err));
+
+      //フッター
+      fetch("./footer.html")
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById("footer").innerHTML = html;
+        });
       </script>
-
-
   </main>
 </body>
 </html>
