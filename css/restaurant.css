@@ -1,0 +1,253 @@
+body {
+  font-family: "Sawarabi Mincho", serif;
+  background: url(../img/top/background.png);
+}
+.berundorf-text-link{
+    color: #880A45;
+    text-decoration: none;
+}
+
+/* ========= トップセクション ========== */
+.berundorf-section {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 背景画像 */
+.berundorf-section img {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+}
+
+/* 文字コンテンツ */
+.berundorf-content {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 4% 5%;
+  color: #fff;
+}
+
+/* タイトル */
+.berundorf-title p {
+  font-size: 24px;
+  margin: 0 0 16% 0;
+  font-family: "Jacques Francois", serif;
+}
+
+/* キャッチコピー */
+.berundorf-copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.berundorf-copy h1 {
+  font-size: 62px;
+  margin: 0;
+  font-family: "Sawarabi Mincho", serif;
+  text-align: center;
+}
+
+/* --- リンク --- */
+.berundorf-copy a {
+  color: black;
+  text-decoration: none;
+  padding: 6%;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.berundorf-copy a:hover {
+  color: #000;
+  font-size: 20px;
+}
+
+/* 住所 */
+.berundorf-address {
+  margin-top: 4%;
+  margin-bottom: 4%;
+  font-size: 20px;
+  font-family: "Sawarabi Mincho", serif;
+  color: #333;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* 区切り線 */
+.section-line {
+  width: 100%;
+  display: block;
+}
+
+/* ========= 最新情報（ほぼそのまま） ========== */
+.berundorf-news-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.berundorf-news-box {
+  background: #ffffff;
+  width: 94%;
+  padding: 4% 3%;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  display: flex;
+  border: 1px solid #B8A36C;
+}
+
+.berundorf-news-left {
+  width: 20%;
+  padding-top: 4%;
+  padding-left: 2%;
+}
+
+.berundorf-news-title {
+  font-size: 36px;
+  font-family: "Sawarabi Mincho", serif;
+  margin-bottom: 20%;
+}
+
+.berundorf-news-btn {
+  display: inline-block;
+  padding: 4.5% 10.5%;
+  border: 1px solid #B8A36C;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #333;
+  background: #fff;
+  font-size: 17px;
+}
+
+.berundorf-news-btn:hover {
+  background: #f5f5f5;
+}
+
+/* カード右側 */
+.berundorf-news-right {
+  width: 80%;
+}
+
+.berundorf-news-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.berundorf-news-card {
+  width: calc(25% - 12px);
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.berundorf-news-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.berundorf-news-card-content {
+  flex-grow: 1;
+  padding: 3% 4% 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.berundorf-news-card h3 {
+  font-size: 14px;
+  margin: 6% 0 2% 7%;
+}
+
+.berundorf-news-card p {
+  font-size: 12px;
+  color: #555;
+  margin-top: 19%;
+  text-align: right;
+  margin-right: 10%;
+}
+
+.berundorf-news-card-footer {
+  height: 16px;
+  background: #f4e9d8; /* レストラン向け暖色 */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* ========= 紹介セクション ========== */
+.berundorf-intro-section {
+  width: 100%;
+  padding: 50px 0;
+}
+
+.berundorf-intro-wrapper {
+  display: flex;
+  gap: 40px;
+}
+
+.berundorf-intro-left {
+  width: 60%;
+}
+
+.berundorf-intro-img {
+  width: 70%;
+  max-width: 100%;
+  margin-left: 5%;
+}
+
+.berundorf-intro-paragraph p {
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 20px;
+  margin-left: 5%;
+  margin-top: 7%;
+  line-height: 2;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+}
+
+.berundorf-copy-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+}
+
+.berundorf-ball {
+  width: 40%;
+  height: auto;
+  margin-top: -10%;
+  margin-left: 50%;
+}
+
+.berundorf-copy-text {
+  width: 80%;
+  height: auto;
+  margin-top: -65%;
+}
+
+.berundorf-copy-triangle {
+  width: 88%;
+  height: auto;
+  margin-top: -135%;
+}
+
+.berundorf-banner {
+  display: block;
+  margin: 20px auto;
+  width: 75%;
+  height: 120%;
+}
