@@ -1,0 +1,315 @@
+body {
+  /* Typographic */
+  font-family: "Sawarabi Mincho", serif;
+  /* Visual */
+  background-image: url(../assets/images/banquet_plan/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.main__ttl {
+  /* Positioning */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Typographic */
+  font-size: 65px;
+}
+
+.main__ttl::before,
+.main__ttl::after {
+  /* Positioning */
+  display: block;
+  flex: 1;
+  /* Box Model */
+  height: 10px;
+  /* Visual */
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: 100% 100%;
+  content: "";
+}
+
+.main__ttl::before {
+  /* Visual */
+  background-image: url(../assets/images/banquet_plan/ttl_left.png);
+  /* Box Model */
+  margin-right: 30px;
+}
+
+.main__ttl::after {
+  /* Visual */
+  background-image: url(../assets/images/banquet_plan/ttl_right.png);
+  /* Box Model */
+  margin-left: 30px;
+}
+
+.move_restaurant {
+  /* Positioning */
+  display: block;
+  text-align: left;
+  /* Box Model */
+  margin: 39px 56px 0;
+  /* Typographic */
+  font-size: 20px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.banquet__inner {
+  /* Box Model */
+  width: 88%;
+  max-width: 1270px;
+  margin: 0 auto;
+}
+
+.banquet_intro__lead {
+  /* Positioning */
+  display: block;
+  text-align: center;
+  position: relative;
+  /* Box Model */
+  margin: 76px 0 45px;
+  padding: 60px 120px;
+  /* Typographic */
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 29px;
+  line-height: 1.34;
+  color: #8a6854;
+  /* Visual */
+  background-color: #ffffff;
+}
+
+.banquet_intro__lead::after {
+  /* Positioning */
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* Box Model */
+  width: 100%;
+  height: 6px;
+  box-sizing: border-box;
+  /* Typographic */
+  content: "";
+  /* Visual */
+  border-top: 1px solid #b8a36c;
+  border-bottom: 1px solid #b8a36c;
+}
+
+.banquet_intro__note {
+  /* Positioning */
+  display: grid;
+  row-gap: 16px;
+  text-align: center;
+  /* Box Model */
+  margin: 40px;
+  /* Typographic */
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 24px;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.banquet_rooms__ttl {
+  /* Positioning */
+  position: relative;
+  display: inline-block;
+  /* Box Model */
+  padding-left: 32px;
+  margin: 40px 0 36px;
+  /* Typographic */
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 32px;
+  line-height: 1.2;
+  color: #000;
+  /* Visual */
+  border-bottom: 1px solid #b8a36c;
+}
+
+.banquet_rooms__ttl::before {
+  /* Positioning */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* Box Model */
+  width: 6px;
+  height: 38px;
+  /* Visual */
+  content: "";
+  background-color: #b8a36c;
+}
+
+.banquet_rooms__ttl::after {
+  /* Positioning */
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  /* Box Model */
+  width: 2px;
+  height: 38px;
+  /* Visual */
+  content: "";
+  background-color: #b8a36c;
+}
+
+
+.banquet_rooms__list {
+  /* Positioning */
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  /* Box Model */
+  width: 100%;
+}
+
+.banquet_rooms__room {
+  /* Box Model */
+  margin: 0;
+  width: 25.8%;
+}
+
+.banquet_rooms__room img {
+  /* Positioning */
+  display: block;
+  /* Box Model */
+  width: 100%;
+  height: auto;
+}
+
+.banquet_rooms__name {
+  /* Positioning */
+  display: block;
+  text-align: center;
+  /* Box Model */
+  margin-top: 20px;
+  /* Typographic */
+  font-size: 32px;
+}
+
+.banquet_rooms__address {
+  /* Positioning */
+  display: block;
+  text-align: center;
+  /* Box Model */
+  margin: 30px 0;
+  /* Typographic */
+  font-size: 20px;
+}
+
+.article_divider {
+  /* Box Model */
+  height: 6px;
+  box-sizing: border-box;
+  /* Visual */
+  border-top: 1px solid #B8A36C;
+  border-bottom: 1px solid #B8A36C;
+}
+
+.banquet_fees__ttl {
+  /* Positioning */
+  display: block;
+  text-align: center;
+  /* Box Model */
+  margin: 30px auto;
+  /* Typographic */
+  font-size: 36px;
+  font-family: "Sawarabi Mincho", serif;
+}
+
+.banquet_fees__note {
+  /* Positioning */
+  display: block;
+  text-align: right;
+  /* Box Model */
+  margin: 10px auto;
+  /* Typographic */
+  font-size: 20px;
+}
+
+.banquet_fees__table {
+  /* Positioning */
+  text-align: center;
+  /* Box Model */
+  width: 100%;
+  border-collapse: collapse;
+  /* Typographic */
+  font-size: 24px;
+}
+
+.banquet_fees__thead {
+  /* Visual */
+  background-color: #B8A36C40;
+}
+
+.banquet_fees__tbody {
+  /* Visual */
+  background-color: #ffffff;
+}
+
+.banquet_fees__th:first-child,
+.banquet_fees__table td:first-child {
+  /* Visual */
+  border-right: 1px solid #B8A36C;
+}
+
+.banquet_fees__table tr:not(:first-child) td {
+  /* Visual */
+  border-top: 1px solid #B8A36C;
+}
+
+.banquet_fees__table tbody td:nth-child(4) {
+  /* Visual */
+  border-left: 1px solid #B8A36C;
+}
+
+.banquet_fees__th,
+.banquet_fees__td {
+  /* Positioning */
+  text-align: center;
+  vertical-align: middle;
+  /* Box Model */
+  padding: 10px;
+  height: 95px;
+  /* Visual */
+  border: none;
+}
+
+.td_inner {
+  /* Positioning */
+  display: inline-block;
+  text-align: left;
+}
+
+.banquet_contact {
+  /* Positioning */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  text-align: center;
+  /* Box Model */
+  border: 3px double #b8a36c;
+  margin: 60px auto 100px;
+  width: 590px;
+  padding: 20px 24px;
+  /* Typographic */
+  font-size: 24px;
+}
+
+.banquet_contact p {
+  /* Box Model */
+  margin: 0;
+  /* Typographic */
+  white-space: nowrap;
+}
+
+.banquet_contact a {
+  /* Typographic */
+  white-space: nowrap;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  font-size: 32px;
+}

@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1%;
+  padding: 1% 2%;
   background: url(../../img/p0522_l\ 6.png);
   color: #fff;
 }
@@ -24,36 +24,51 @@
 .nav {
   display: flex;
   align-items: center;
-  writing-mode: horizontal-tb
+  writing-mode: horizontal-tb;
+    width: 40%;       
+  gap: 4%;   
+  
+
 }
 
 .nav a {
-  font-size: 85%;
-  padding: 1%;
-  gap: 7%;  
-  align-items: center;
-  display: inline-block;
+ display: inline-block;
   text-align: center;
-  letter-spacing: 0.2em;
+  white-space: nowrap;
+  font-size: 14px;
+  letter-spacing: 0.05em;
 }
+
+.nav a::after {
+  display: block;
+  text-align: center;
+  margin-top: 2px;
+  white-space: pre;
+  font-size: 12px;
+}
+
 
 /* 1つ目：レストランベルンドルフ */
 .nav a:nth-child(1)::after {
-  content: "\Aベルンドルフ";
-  white-space: pre;
+  content: "ベルンドルフ";
+}
+
+/* 2つ目：ガラス体験工房 森のくに */
+.nav a:nth-child(2)::after {
+  content: "森のくに";
 }
 
 /* 3つ目：ホテルベルンドルフ */
 .nav a:nth-child(3)::after {
-  content: "\Aベルンドルフ";
-  white-space: pre;
+  content: "ベルンドルフ";
 }
 
-.nav a:nth-child(4),
-.nav a:nth-child(5) {
-  display: inline;       /* inlineに戻すと改行されない */
-  white-space: nowrap;   /* 絶対に折り返さない */
+/* お知らせ・お問い合わせは2行にしない */
+.nav a:nth-child(4)::after,
+.nav a:nth-child(5)::after {
+  content: "";
 }
+
 /* 
 .hamburger {
   display: flex;

@@ -1,145 +1,525 @@
-.restaurant {
-    font-family: 'Sawarabi Mincho', serif;
-    background-color: #f5f5f5;
-    padding: 0 168px;
-}
-.restaurant .interior img{
-    width: 50%;
-    padding: 1
+body {
+  font-family: "Sawarabi Mincho", serif;
+  background: url(../img/top/background.png);
 }
 
-.restaurant .intro-txt{
-    width: 50%;
+#berundorf-text-link {
+  color: #880A45;
+  text-decoration: none;
 }
 
-.restaurant .line {
-    border-bottom: double;
-    border-color: #B8A36C;
-    width: 701px;
-    margin: 40px auto 80px auto;
+/* ========= トップセクション ========== */
+#berundorf-section {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-.restaurant .supplement {
-    text-align: right;
+/* 背景画像 */
+#berundorf-section img {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
 }
 
+/* 文字コンテンツ */
+#berundorf-content {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 4% 5%;
+  color: #fff;
+}
 
-/* food */
-.restaurant .title {
-    font-size: 40px;
-    margin-bottom: 50px;
+/* タイトル */
+#berundorf-title p {
+  font-size: 24px;
+  margin: 0 0 16% 0;
+  font-family: "Jacques Francois", serif;
+}
+
+/* キャッチコピー */
+#berundorf-copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+#berundorf-copy h1 {
+  font-size: 62px;
+  margin: 0;
+  font-family: "Sawarabi Mincho", serif;
+  text-align: center;
+}
+
+/* --- リンク --- */
+#berundorf-copy a {
+  color: black;
+  text-decoration: none;
+  padding: 6%;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+#berundorf-copy a:hover {
+  color: #000;
+  font-size: 20px;
+}
+
+/* 住所 */
+#berundorf-address {
+  margin-top: 4%;
+  margin-bottom: 4%;
+  font-size: 20px;
+  font-family: "Sawarabi Mincho", serif;
+  color: #000000;
+  text-align: center;
+  line-height: 2.0;
+  padding-left: 3%;   /* 左右に余白 */ 
+}
+
+/* 区切り線 */
+#section-line {
+  width: 100%;
+  display: block;
+}
+
+/* ========= 最新情報 ========== */
+.berundorf-news-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.berundorf-news-box {
+  background: #ffffff;
+  width: 94%;
+  padding: 4% 3%;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  display: flex;
+  border: 1px solid #B8A36C;
+}
+
+.berundorf-news-left {
+  width: 20%;
+  padding-top: 4%;
+  padding-left: 2%;
+}
+
+.berundorf-news-title {
+  font-size: 36px;
+  font-family: "Sawarabi Mincho", serif;
+  margin-bottom: 20%;
+}
+
+.berundorf-news-btn {
+  display: inline-block;
+  padding: 4.5% 10.5%;
+  border: 1px solid #B8A36C;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #333;
+  background: #fff;
+  font-size: 17px;
+}
+
+.berundorf-news-btn:hover {
+  background: #f5f5f5;
+}
+
+/* カード右側 */
+.berundorf-news-right {
+  width: 80%;
+}
+
+.berundorf-news-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.berundorf-news-card {
+  width: calc(25% - 12px);
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.berundorf-news-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.berundorf-news-card-content {
+  flex-grow: 1;
+  padding: 3% 4% 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.berundorf-news-card h3 {
+  font-size: 14px;
+  margin: 6% 0 2% 7%;
+}
+
+.berundorf-news-card p {
+  font-size: 12px;
+  color: #555;
+  margin-top: 19%;
+  text-align: right;
+  margin-right: 10%;
+}
+
+.berundorf-news-card-footer {
+  height: 16px;
+  background: #C12B7235;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* ========= 紹介セクション ========== */
+#berundorf-intro-section {
+  width: 100%;
+  padding: 50px 0;
+}
+
+#berundorf-intro-wrapper {
+  display: flex;
+  gap: 40px;
+}
+
+#berundorf-intro-left {
+  width: 60%;
+}
+
+#berundorf-intro-img {
+  width: 70%;
+  max-width: 100%;
+  margin-left: 5%;
+}
+
+#berundorf-intro-paragraph p {
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 20px;
+  margin-left: 5%;
+  margin-top: 7%;
+  line-height: 2;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+}
+
+#berundorf-copy-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+}
+
+#berundorf-ball {
+  width: 40%;
+  height: auto;
+  margin-top: -10%;
+  margin-left: 50%;
+}
+
+#berundorf-copy-text {
+  width: 80%;
+  height: auto;
+  margin-top: -65%;
+}
+
+#berundorf-copy-triangle {
+  width: 88%;
+  height: auto;
+  margin-top: -135%;
+}
+
+#berundorf-banner {
+  display: block;
+  margin: 20px auto;
+  width: 75%;
+  height: 120%;
+}
+
+html, body {  
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+#restaurant .section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+}
+
+#restaurant .section-title::before,
+#restaurant .section-title::after {
+  content: "";
+  flex-grow: 1;
+  border-top: 5px double #B8A36C;
+}
+
+#restaurant .menu-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10%;
+    margin: 5% 5% ;
+}
+
+#restaurant .menu-item {
     text-align: center;
 }
 
-.restaurant .foodmenu {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.foodmenu::before,
-.foodmenu::after {
-    background-color:#B8A36C;
-    content: "";
-    flex-grow: 1;
-    height: 2px;
-}
-
-.foodmenu::before {
-    margin-right: 50px;
-}
-.foodmenu::after {
-    margin-left: 50px;
-}
-
-
-.restaurant .food img {
-    width: 281px;
-    height: 188px;
-    border-radius: 2px;
-}
-
-.restaurant .in-rice {
-    display: flex; 
-    flex-wrap: wrap;
-    gap: 144px;
-    justify-content: center;
-}
-.restaurant .no-rice {
-    display: flex; 
-    flex-wrap: wrap;
-    gap: 144px;
-    justify-content: center;
-}
-.restaurant .food p {
-    font-size: 24px;
-    text-align: center;
-}
-
-/* ワイン */
-.restaurant details summary{
-    color: #63173B;
-}
-
-.restaurant details {
-    text-align: center;
-    margin-bottom: 0px;
-}
-
-.restaurant .menu-box{
-    background-color: white;
-    border: solid 1px #B8A36C;
-    margin-left: 10%;
-    margin-right: 10%;
-    font-size: 20px;
-}
-
-.restaurant .menu-title{
-    font-size: 32px;
-}
-
-.text-color{
-    color:#880A45;
-}
-
-
-.group-a img{
+#restaurant .menu-item img {
     width: 100%;
+    height: auto;
 }
 
-
-/* 上部へ戻るサンプル！！！！！後で消す！！！ */
-
-/* トップへ戻るボタン */
-.page-top-btn {
-    width: 100px;
-    height: 100px;
-    position: fixed;
-    right: 107px;
-    bottom: 80px;
-    background: #e2540796;
-    border-radius: 50%;
-
-    opacity: 0;
-    visibility: hidden;
-    /* background: 100%; */
+#restaurant .menu-item .cooking {
+    width: 70%;
 }
 
-.active{
-    opacity: 1;
-    visibility: visible;
+#restaurant #set-info {
+    margin-left: 68%;
 }
 
-/* ホバーしたとき */
-.page-top-btn:hover {
-    background: rgb(255, 0, 0, 0.8);
-    color: rgb(255, 255, 255, 0.8);
-} 
+#restaurant .wine-glass {
+    width: 80%;
+    margin-left: 30%;
+    margin-top: -30%;
+}
 
+#restaurant .middle-lines {
+    width: 100%;
+    max-width: 600px;
+    margin-left: 15%;
+    height: 20px;
+    position: relative;
+    margin-top: 1%;
+}
 
-/* Topへゆっくりスクロール */
-html{
-  scroll-behavior: smooth;
+#restaurant .middle-lines::before,
+#restaurant .middle-lines::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #c2a661;
+}
+
+#restaurant .middle-lines::before {
+    top: 6px;
+}
+
+#restaurant .middle-lines::after {
+    bottom: 6px;
+}
+
+#restaurant #wine-line-section {
+    display: flex;
+}
+
+#restaurant .menu-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 40px;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 5%;
+}
+
+#restaurant .menu-box {
+    text-align: center;
+}
+
+#restaurant #side-info {
+    margin-left: 66%;
+}
+
+#restaurant .double-line {
+    border-top: 1px solid #c8ab75;
+    border-bottom: 1px solid #c8ab75;
+    height: 8px;
+    margin: 20px 0;
+}
+
+#restaurant .menu-title--2gyo{
+    margin-top: 8.5%;
+    margin-bottom: 8.5%;
+}
+
+#restaurant .menu-title--3gyo {
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+#restaurant .menu-name {
+    margin-top: 2.5%;
+}
+
+#restaurant .menu-title--two-lines {
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+
+/* WEIN */
+#restaurant #wine-title {
+    font-size: 40px;
+    color: #63173B;
+    margin-top: 5%;
+    margin-left: 2%;
+}
+
+#restaurant .wine-icon {
+    width: 10%;
+    height: 10%;
+    margin-left: 65%;
+}
+
+#restaurant .wine-header{
+    display: flex;
+    margin-left: 11%;
+    margin-top: 3%;
+}
+
+#restaurant .wine-section {
+  width: 90%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #B8A36C;
+  margin-bottom: 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+}
+
+#restaurant .wine-contents {
+  font-size: 16px;
+  margin: 3% 5%;
+}
+
+#restaurant .wine-item {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: start;
+    margin-bottom: 3%;
+}
+
+#restaurant .wine-text {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#restaurant .wine-price {
+    font-size: 16px;
+    text-align: right;
+    min-width: 120px;
+}
+
+#restaurant .price-glass {
+    padding: 2%;
+}
+
+#restaurant .wine-name {
+    font-size: 25px;
+    margin: 0;
+    white-space: nowrap; 
+}
+
+#restaurant .wine-description {
+    margin-left: 7.5%;
+    padding: 2% 0;
+}
+
+#restaurant .price-bottle {
+    border-bottom: 1px solid #B8A36C;
+    padding-bottom: 3%;
+    display: inline-block;
+    margin-top: -20%;
+}
+
+/* ドリンク */
+#restaurant .drink-section {
+  width: 90%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid #B8A36C;
+  margin-bottom: 10%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#restaurant .drink-contents {
+  font-size: 16px;
+  margin: 3% 5%;
+}
+
+#restaurant .drink-header {
+    margin-left: 13.5%;
+    margin-top: -5%;
+    margin-bottom: 3%;
+}
+
+#restaurant #drink-title {
+    font-size: 40px;
+}
+
+#restaurant .drink-icon {
+    width: 10%;
+    height: 10%;
+    margin-left: 65%;
+}
+
+#restaurant .drink-item {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: start;
+    margin-bottom: 3%;
+}
+
+#restaurant .drink-name {
+    font-size: 25px;
+}
+
+#restaurant .drink-price {
+    font-size: 20px;
+    padding: 3% 0;
+}
+
+#restaurant .drink-image {
+    width: 10%;
+    margin-left: 88%;
+    margin-top: -60%;
+}
+
+#restaurant .drink-price {
+    width: 20%;
+    border-bottom: 1px solid #B8A36C;
+    padding-bottom: 3px;
+    display: inline-block;
+
 }

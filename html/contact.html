@@ -4,9 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css">
 </head>
-<body>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScVn8WLtc6Zf7Fpr7MjT0SbNXtu36ZdbXs4-dIuv8gu4Gh6ZQ/viewform?embedded=true" width="640" height="1340" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+<body id="inquiry">
+    <header class="header">
+
+      <a href="index.html" class="logo">株式会社エーデルワインサポート</a>
+
+
+      <nav class="nav">
+        <a href="#">レストラン</a>
+        <a href="#">ガラス体験工房<wbr>森のくに</a>
+        <a href="#">ホテル</a>
+        <a href="#">お知らせ</a>
+        <a href="#">お問い合わせ</a>
+      </nav>
+    </header>
+
+    <main>
+        <section class="inquiry">
+
+            <h1 class="inquiry__title">お問い合わせ</h1>
+            <div class="inquiry__divider"></div>
+
+            <div class="inquiry__intro">
+            <p>以下フォームよりお気軽にお問い合わせください。</p>
+            <p>お問い合わせ内容の確認後、担当者よりご連絡させていただきます。</p>
+            </div>
+
+            <div class="inquiry__form">
+            <form class="form">
+
+                <label class="form__label">
+                    お名前<span class="form__required">必須</span>
+                </label>
+                <input class="form__input" type="text" placeholder="盛岡　太郎">
+
+                <label class="form__label">
+                    お名前(フリガナ)<span class="form__required">必須</span>
+                </label>
+                <input class="form__input" type="text" placeholder="モリオカ　タロウ">
+
+                <label class="form__label">
+                    お問い合わせ先<span class="form__required">必須</span>
+                </label>
+                <div class="form__select-wrapper">
+                    <select class="form__select">
+                        <option>選択してください。</option>
+                        <option>ホテルベルンドルフ</option>
+                        <option>レストランベルンドルフ</option>
+                        <option>ガラス工房 森のくに</option>
+                        <option>エーデルワイン・サポート</option>
+                    </select>
+                </div>
+
+                <label class="form__label">
+                    メールアドレス<span class="form__required">必須</span>
+                </label>
+                <input class="form__input" type="email" placeholder="moriokatarou@morioka.com">
+
+                <label class="form__label">
+                    電話番号<span class="form__required">必須</span>
+                </label>
+                <input class="form__input" type="text" placeholder="123-4567-8910">
+
+                <label class="form__label">
+                    お問い合わせ内容をご記入ください。<span class="form__required">必須</span>
+                </label>
+                <textarea class="form__textarea"></textarea>
+
+                <button type="submit" class="form__submit">送信内容を確認する</button>
+
+            </form>
+            </div>
+
+        </section>
+    </main>   
 </body>
 </html>
