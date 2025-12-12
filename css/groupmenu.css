@@ -147,3 +147,13 @@ body {
 #restaurant-top-link {
     margin-left: 10%;
 }
+
+/* フッター */
+.footer #tel {
+    font-size: 20px;
+    margin-top: 20%;
+}
+
+.footer #tel-number {
+    font-size: 30px;
+}

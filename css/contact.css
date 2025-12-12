@@ -99,3 +99,9 @@ body {
   text-align: center;
   border: 1px solid #B8A36C;
 }
+
+
+.footer_company_content_textdiv_button {
+  white-space: nowrap; /*改行しない*/
+  width: 110%;
+}
