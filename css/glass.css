@@ -295,7 +295,6 @@ body {
   height: 120%;         /* ← 縦を短くして細長く */
 
 }
-
 /*画面幅*/
 html, body {  
   overflow-x: hidden;
@@ -427,6 +426,7 @@ html, body {
 }
 #glass #glass-title {
   font-size: 18px;
+  margin-top: 1%;
 }
 
 #glass .glass_image{
@@ -436,6 +436,9 @@ html, body {
 
 #glass #glass-detail {
   margin-left: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+
 }
 
 #glass #glass-time {
@@ -468,13 +471,11 @@ html, body {
 #glass .chopstick-rest_image1 {
   width: 18%;
   margin-left: 45%;
-  margin-top: -3%;
 }
 
 #glass .chopstick-rest_image2 {
   width: 18%;
   margin-left: 2%;
-  margin-top: -3%;
 }
 
 /* サンドブラスト*/
@@ -675,24 +676,19 @@ html, body {
 }
 
 /* サンドブラスト */
-#glass .sandblast-content {
+#glass .sandblasting-contents {
   width: 85%;
   height: 100%;
-  background-color: #fff;
-  border: 2px solid #B8A36C;
-  margin-bottom: 10%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  padding: 1%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 2%;
 }
-#glass .sandblast-title {
+#glass .sandblasting-title {
   margin-left: 12%;
   margin-top: 5%;
   margin-bottom: 2%;
   font-size: 30px;
 }
-#glass .sandblast-details {
+
+#glass .sandblasting-detail {
   margin-left: 9%;
   margin-top: 2%;
   line-height: 1.5;
@@ -708,11 +704,15 @@ html, body {
   color: #1B24FF;
 }
 
-#glass .sandblast-image {
+#glass .sandblasting-image {
   width: 25%;
   margin-left: 25%;
   margin-bottom: 2%;
   margin-top: -7%;
+}
+
+#glass .sandblasting-remarks {
+  gap: 4%;
 }
 
 /* 吹きガラス */
@@ -762,10 +762,8 @@ html, body {
 
 #glass .info-deco-image2 {
   width: 25%;
-  margin-top: -11%;
   margin-left: 2%;
 }
-
 .footer_company_content_textdiv {
   white-space: nowrap; /*改行しない*/ 
 }
