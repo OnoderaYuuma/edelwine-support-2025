@@ -55,9 +55,6 @@ body {
   text-align: center; 
 }
 
-
-
-
 .morino-kuni-link a {
   color: black;
   text-decoration: none;
@@ -173,7 +170,7 @@ body {
     justify-content: space-between; 
 }
 
-/* タイトル */
+ /* タイトル */
 .news-card h3 {
     font-size: 14px;
     margin-bottom: 2%; /* 広めにとる */
@@ -285,6 +282,10 @@ body {
   width: 88%;      /* 横幅調整（好みで変えられる） */
   height: auto;
    margin-top: -95%;
+}
+.intro-paragraph-a {
+  color: #00B3FF;
+  text-decoration: none;
 }
 
 .shop-banner {
@@ -684,6 +685,7 @@ html, body {
   margin-left: 12%;
   margin-top: 5%;
   margin-bottom: 2%;
+  font-size: 30px;
 }
 
 #glass .sandblasting-detail {
@@ -729,6 +731,7 @@ html, body {
 #glass .blownglass-title {
   margin-left: 12%;
   margin-bottom: 2%;
+  font-size: 30px;
 }
 
 #glass .glassblowing-content {
@@ -761,11 +764,10 @@ html, body {
   width: 25%;
   margin-left: 2%;
 }
-#glass-link {
-  color: #00B3FF;
+.footer_company_content_textdiv {
+  white-space: nowrap; /*改行しない*/ 
 }
 
-a {
-  text-decoration: none;
-  color: black;
+#reservation_notice {
+  color: #FF0000;
 }
