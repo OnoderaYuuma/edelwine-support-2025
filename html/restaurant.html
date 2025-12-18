@@ -4,12 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>レストラン ベルンドルフ</title>
-   <link rel="stylesheet" href="../css/restaurant.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css"> 
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css">
+   <link rel="stylesheet" href="/css/header.css"> 
+   <link rel="stylesheet" href="/css/restaurant.css">
 
 </head>
 <body>
- <div id="header"></div>
+ <div id="header-area"></div>
 
 <section id="berundorf-section">
   <img src="/img/restaurant/restaurantTOP.png" id="berundorf-bg" />
@@ -133,10 +134,20 @@
   </div>
 </section>
 
-<!-- ショッピングバナー -->
-<a href="https://example.com" target="_blank">
-  <img src="../img/restaurant/Group 399.png" id="berundorf-banner" />
-</a>
+<div id="berundorf-banner-wrapper">
+  <a href="#" class="berundorf-banner-link">
+    <div class="berundorf-banner-item">
+      <img src="/img/restaurant/団体予約.png" id="berundorf-banner-left" />
+    </div>
+  </a>
+
+  <a href="#" class="berundorf-banner-link">
+    <div class="berundorf-banner-item">
+      <img src="/img/restaurant/宴会プラン.png" id="berundorf-banner-right" />
+  </a>
+</div>
+
+</div>
       <main id="restaurant">
         <section class="frame-group">
             <div class="frame frame--top-left">
@@ -382,7 +393,7 @@
     fetch("header.html")
       .then((res) => res.text())
       .then((data) => {
-        document.getElementById("header").innerHTML = data;
+        document.getElementById("header-area").innerHTML = data;
       });
   </script>
 </body>

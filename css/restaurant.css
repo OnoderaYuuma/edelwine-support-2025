@@ -523,3 +523,20 @@ html, body {
     display: inline-block;
 
 }
+
+/* バナー全体 */
+#berundorf-banner-wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  gap: 1%;
+  padding: 5%;
+  margin-top: -5%;
+}
+
+#berundorf-banner-left,
+#berundorf-banner-right {
+  width: 100%;
+  height: auto;
+  display: block;
+}
