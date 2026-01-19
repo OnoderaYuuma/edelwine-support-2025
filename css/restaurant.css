@@ -279,12 +279,13 @@ html, body {
 #restaurant .menu-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10%;
-    margin: 5% 5% ;
+    margin-top: 5%;
+    
 }
 
 #restaurant .menu-item {
     text-align: center;
+    margin-bottom: 10%;
 }
 
 #restaurant .menu-item img {
@@ -294,6 +295,12 @@ html, body {
 
 #restaurant .menu-item .cooking {
     width: 70%;
+}
+
+#restaurant .menu-box .cooking {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
 }
 
 #restaurant #set-info {
@@ -523,3 +530,162 @@ html, body {
     display: inline-block;
 
 }
+
+/* =========================
+   メニュー レスポンシブ
+   ========================= */
+@media screen and (max-width: 768px) {
+  #restaurant .menu-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6%;
+    margin: 8% 6%;
+  }
+
+  #restaurant .menu-item .cooking {
+    width: 100%;
+  }
+
+  #restaurant .menu-item {
+    text-align: center;
+  }
+
+  #restaurant #set-info {
+    margin-left: 0;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  #restaurant .menu-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* セット表記の下に余白を作る */
+  #restaurant #set-info {
+    margin-top: 20%;
+    text-align: right;
+  }
+
+  /* ワイン区切り全体を下げる */
+  #restaurant #wine-line-section {
+    margin-top: 40px;     /* ← ここで位置を下げる */
+  }
+
+  #restaurant .middle-lines{
+    width: 50%;
+    margin-left: 0%;
+    margin-top: -3%;
+  }
+  
+  #restaurant .wine-glass {
+    width: 50%;
+  }
+
+  #restaurant .menu-container {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10%;
+    margin: 8% 6%;
+  }
+
+  #restaurant .menu-box .cooking {
+    width: 100%;            
+  }
+
+  #restaurant .menu-box {
+    text-align: center;
+  }
+
+  #restaurant #side-info {
+    margin-left: 0;
+    text-align: right;
+    font-size: 12px;
+    margin-right: 6%;
+  }
+
+  /* ワイン1件：縦構造にする */
+  #restaurant .wine-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  /* ワイン名 */
+  #restaurant .wine-name {
+    font-size: 20px;
+    line-height: 1.5;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  /* 説明文 */
+  #restaurant .wine-description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    margin-left: 5%;
+  }
+
+  /* 価格：説明文の下・右寄せ */
+  #restaurant .wine-price {
+    margin-left: auto;   /* ← 右寄せの決定打 */
+    text-align: right;
+    font-size: 14px;
+  }
+
+  #restaurant .price-glass {
+    margin-bottom: 6px;
+  }
+
+  /* 金色の線は維持 */
+  #restaurant .price-bottle {
+    border-bottom: 1px solid #B8A36C;
+    padding-bottom: 3px;
+    display: inline-block;
+  }
+
+  /* スパークリング（8番目）：グラス非表示 */
+  #restaurant .wine-item:nth-child(8) .price-glass {
+    display: none;
+  }
+
+  /* ドリンク全体 */
+  #restaurant .drink-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  /* ドリンク名 */
+  #restaurant .drink-name {
+    font-size: 20px;  
+    line-height: 1.6;
+  }
+
+   /* 価格 */
+  #restaurant .drink-price {
+    font-size: 20px; 
+    width: auto;        
+    min-width: 50px;    
+    margin-left: auto;  
+    
+  }
+
+}
+=======
+/* バナー全体 */
+#berundorf-banner-wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  gap: 1%;
+  padding: 5%;
+  margin-top: -5%;
+}
+
+#berundorf-banner-left,
+#berundorf-banner-right {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
