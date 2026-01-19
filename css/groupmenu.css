@@ -104,11 +104,23 @@ body {
 
 /* 下部説明文 */
 .menu-note {
-    text-align: center;
-    font-size: 14px;
-    margin-top: 40px;
-    margin-bottom: 2%;
-    line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: left;
+  margin-left: 10%;
+  margin-right: 15%;
+  margin-top: -5%;
+  word-break: break-word;
+  text-align: center;
+}
+
+/* PC表示 */
+.pc-line {
+  display: inline;
+}
+
+.sp-line {
+  display: none;
 }
 
 /* 線1 */
@@ -139,6 +151,8 @@ body {
 }
 
 .menu-notice {
+    font-size: 20px;
+    line-height: 1.5;
     margin-left: 15%;
     margin-top: 8%;
     margin-bottom: 10%;
@@ -157,3 +171,105 @@ body {
 .footer #tel-number {
     font-size: 30px;
 }
+
+
+@media screen and (max-width: 768px) {
+
+  /* 横2列 → 縦並び */
+  .menu-row {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  /* 各メニューを縦に並べる */
+  .menu-item {
+    width: 100%;
+    margin-bottom: 50px;
+    text-align: left;   /* タイトル・説明文は左寄せ */
+    padding-left: 8%;   /* 左余白の微調整 */
+    padding-right: 8%;  /* 右側の余白も少し確保 */
+  }
+
+  /* タイトル＋価格は左寄せ */
+  .menu-title-row {
+    justify-content: flex-start;
+    padding-left: 0;
+    margin-bottom: 8px;
+  }
+
+  .menu-title {
+    margin-left: 0;
+    font-size: 40px !important;
+  }
+
+  .price,
+  .note {
+    margin-left: 20%;
+    font-size: 20px !important;
+  }
+
+  /* 説明文 */
+  .menu-desc {
+    font-size: 20px !important;
+    margin-top: 5px;
+    margin-left: 0; /* 左寄せ */
+  }
+
+  /* 画像は中央寄せ */
+  .menu-item img {
+    width: 70%;
+    height: auto;
+    margin: 5% 8% 0 8%;  /* 上マージン15px、左右autoで中央寄せ */
+  }
+
+  /* 枠丸み */
+  .menu-contents {
+    border-radius: 20px;
+  }
+
+  /* メニュー全体の余白 */
+  .menu-wrapper {
+    margin: 40px auto;
+    max-width: 500px;
+  }
+
+  .menu-note {
+    font-size: 16px;
+    line-height: 1.6;
+    white-space: pre-line;  /* 改行文字を反映 */
+    text-align: left;
+    margin-left: 4%;
+    margin-right: 15%;
+    word-break: break-word;
+    margin-top: -5%;
+  }
+
+  .menu-note {
+    font-size: 18px;
+    line-height: 0.5;
+    text-align: center;
+    margin-bottom: 2%;
+  }
+  .menu-note br {
+    margin: 0.15em 0;
+  }
+
+  .pc-line {
+    display: none;
+  }
+  .sp-line {
+    display: inline;
+  }
+
+  .menu-notice {
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 8% auto 10%;
+    max-width: 720px;
+    padding: 0 4%;
+    word-break: break-word;
+  }
+
+}
+
+

@@ -365,6 +365,12 @@ html, body {
     background: #F0C3FF;
 }
 
+/* 吹きガラス */
+.heading.blownglass-heading .diamond,
+.heading.blownglass-heading .line {
+    background: #C4F6FA;
+}
+
 #glass .section-title {
   display: flex;
   align-items: center;
@@ -432,6 +438,11 @@ html, body {
 #glass .glass_image{
   margin-left: 56.5%;
   margin-top: -2%;
+}
+
+/* PCでは改行させない */
+#glass .sp-only {
+  display: none;
 }
 
 #glass #glass-detail {
@@ -515,19 +526,30 @@ html, body {
   margin-top: 3%;
 }
 
+
+/* ─────────────
+   サンドブラスト画像（PC）
+──────────────── */
+#glass .sandblast-image {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 3%;
+  margin-left: 3%;
+}
+
 #glass .sandblasting-image1 {
-  width: 17%;
-  margin-left: 4%;
-  margin-top: -5%;
-  margin-bottom: 3%;
+  width: 50%;
+  margin-top: -20%;
+  margin-bottom: 2%;
 }
 
 #glass .sandblasting-image2 {
-  width: 17%;
-  margin-left: 2%;
-  margin-top: -5%;
-  margin-bottom: 3%;
+  width: 50%;
+  margin-left: 5%;
+  margin-top: -20%;
+  margin-bottom: 2%;
 }
+
 
 #glass #sandblasting-detail {
   margin-left: 5%;
@@ -601,16 +623,21 @@ html, body {
   line-height: 1.5;   /* 行間 */
 }
 
+#glass .fusing-images {
+  display: flex;
+  margin-left: 13%;
+  margin-top: -4%;
+}
+
 #glass .fusing-image1 {
-  width: 18%;
-  margin-left: 15%;
+  width: 50%;
   margin-top: -7%;
   margin-bottom: 2%;
 }
 
 #glass .fusing-image2{
-  width: 18%;
-  margin-left: 2%;
+  width: 50%;
+  margin-left: 5%;
   margin-top: -7%;
   margin-bottom: 2%;
 }
@@ -619,11 +646,20 @@ html, body {
   margin-left: 5%;
 }
 
-/*トンボ玉*/
-#glass .heading.tombo-heading {
-  margin-top: -8%;
+#glass .reservation-notice {
+  display: flex;
+  margin-left: 9%;
+  margin-top: -7%;
+  line-height: 1.5;   /* 行間 */
 }
 
+#glass .info-deco-image1 {
+  width: 30%;
+  margin-left: 18%;
+}
+
+
+/*トンボ玉*/
 #glass .tombodama {
   width: 85%;
   height: 100%;
@@ -649,71 +685,24 @@ html, body {
   margin-top: 3%;
 }
 
-#glass .tombodama-images1{
-  width: 17%;
-  margin-left: 40%;
+/* トンボ玉：画像ラッパー（PC） */
+#glass .tombodama-images {
+  display: flex;
+  margin-left: 35%;
   margin-top: -9%;
+  gap: 2%;
+}
+
+#glass .tombodama-images1{
+  width: 80%;
   margin-bottom: 2%;
 }
 #glass .tombodama-images2{
-  width: 17%;
-  margin-left: 2%;
-  margin-top: -9%;
+  width: 80%;
+  margin-left: 5%;
   margin-bottom: 2%;
 }
 
-#glass .reservation-notice {
-  display: flex;
-  margin-left: 9%;
-  margin-top: -7%;
-  line-height: 1.5;   /* 行間 */
-}
-
-#glass .info-deco-image1 {
-  width: 30%;
-  margin-left: 18%;
-}
-
-/* サンドブラスト */
-#glass .sandblast-content {
-  width: 85%;
-  height: 100%;
-  background-color: #fff;
-  border: 2px solid #B8A36C;
-  margin-bottom: 10%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  padding: 1%;
-  margin-left: auto;
-  margin-right: auto;
-}
-#glass .sandblast-title {
-  margin-left: 12%;
-  margin-top: 5%;
-  margin-bottom: 2%;
-  font-size: 30px;
-}
-#glass .sandblast-details {
-  margin-left: 9%;
-  margin-top: 2%;
-  line-height: 1.5;
-}
-
-#glass .sandblast-info-item {
-  display: flex;
-  line-height: 2;   /* 行間 */
-  margin-top: 3%;
-}
-
-#glass #link-tel {
-  color: #1B24FF;
-}
-
-#glass .sandblast-image {
-  width: 25%;
-  margin-left: 25%;
-  margin-bottom: 2%;
-  margin-top: -7%;
-}
 
 /* 吹きガラス */
 #glass .glassblowing-wrapper {
@@ -728,15 +717,15 @@ html, body {
   margin-right: auto;
 }
 
-#glass .blownglass-title {
-  margin-left: 12%;
-  margin-bottom: 2%;
-  font-size: 30px;
+#glass .blownglass-contents {
+  margin-left: 5%;
+  margin-top: 2%;
 }
 
-#glass .glassblowing-content {
-  margin-left: 9%;
-  margin-top: 2%;
+#glass .glassblowing-image {
+  margin-left: 20%;
+  margin-top: -5%;
+  margin-bottom: 2%;
 }
 
 #glass .glassblowing-details {
@@ -749,11 +738,23 @@ html, body {
   color: #1B24FF;
 }
 
-#glass .glassblowing-image {
-  width: 25%;
-  margin-left: 25%;
+#glass .blownglass-info {
+  display: flex;
+  line-height: 2;   /* 行間 */
+  margin-top: 3%;
+}
+#glass .chopstick-rest-images {
+  display: flex;
+  justify-content: flex-end; /* 右寄せ */
+  margin-left: 40%;
+}
+
+#glass .chopstick-rest_image1,
+#glass .chopstick-rest_image2 {
+  width: 50%;
+  margin-left: 5%;
+  margin-top: 0%;
   margin-bottom: 2%;
-  margin-top: -5%;
 }
 
 #glass .blownglass-boxs {
@@ -773,3 +774,261 @@ html, body {
 #reservation_notice {
   color: #FF0000;
 }
+
+/* =========================
+   レスポンシブ（スマホ）
+========================= */
+@media screen and (max-width: 768px) {
+
+  /* 共通 */
+  #glass {
+    font-size: 14px;
+  }
+
+  #glass img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  /* タイトル */
+  #glass .heading .title-block {
+    width: 100%;
+    margin: 2% 0;
+  }
+
+  #glass .heading {
+    flex-direction: column;
+  }
+
+  #glass .heading .title-block h3 {
+    font-size: 180%;
+    margin-left: 5%;
+  }
+
+  #glass .heading .arrow-line {
+    margin-left: 5%;
+    width: 90%;
+  }
+
+  /* 枠コンテンツ */
+  #glass .blownglass,
+  #glass .sandblasting,
+  #glass .fusing,
+  #glass .tombodama,
+  #glass .sandblast-content,
+  #glass .glassblowing-wrapper {
+    width: 95%;
+    padding: 3%;
+  }
+
+  /* 各 flex → 縦並び */
+  #glass .glass,
+  #glass .mini-glass,
+  #glass .single-flower-vase,
+  #glass .chopstick-rest,
+  #glass .sandblasting-remarks,
+  #glass .fusing-info-block,
+  #glass .tombodama-info,
+  #glass .sandblast-info-item,
+  #glass .glassblowing-details,
+  #glass .reservation-notice {
+    flex-direction: column;
+  }
+
+  /* 左マージン解除 */
+  #glass .glass_image,
+  #glass .mini-glass_image,
+  #glass .single-flower-vase__image,
+  #glass .chopstick-rest_image1,
+  #glass .chopstick-rest_image2,
+  #glass .sandblasting-image1,
+  #glass .sandblasting-image2,
+  #glass .fusing-image1,
+  #glass .fusing-image2,
+  #glass .tombodama-images1,
+  #glass .tombodama-images2,
+  #glass .sandblast-image,
+  #glass .glassblowing-image,
+  #glass .info-deco-image1,
+  #glass .info-deco-image2 {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  /* nowrap解除（はみ出し防止） */
+  #glass #sandblasting-time,
+  #glass #fusing-details {
+    white-space: normal;
+  }
+
+  /* セクションタイトル */
+  #glass .section-title {
+    font-size: 20px;
+    margin-top: 10%;
+  }
+
+  /* 受注生産タイトル */
+  #glass .sandblast-title,
+  #glass .blownglass-title {
+    margin-left: 5%;
+    font-size: 24px;
+  }
+
+
+  /* =========================
+    見出しタイトルを中央配置
+  ========================= */
+  #glass .heading {
+    justify-content: center;
+  }
+
+  #glass .heading .title-block {
+    text-align: center;
+  }
+
+  #glass .heading .title-block h3 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  /* 菱形＋ラインも中央寄せ */
+  #glass .heading .arrow-line {
+    justify-content: center;
+  }
+
+
+/* 全体の基準文字サイズ */
+  #glass {
+    font-size: 14px;
+  }
+
+  /* 見出し（吹きガラス等） */
+  #glass .heading .title-block h3 {
+    font-size: 16px;
+  }
+
+  #glass .title-sub {
+    font-size: 12px;
+  }
+
+  /* 説明文 */
+  #glass p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /*グラス・一輪挿し等のタイトル*/
+  #glass .sp-only {
+    display: inline;
+  }
+
+  /* 制作時間・料金など */
+  #glass #glass-time,
+  #glass #sandblasting-time,
+  #glass #fusing-details {
+    font-size: 13px;
+  }
+
+  /* =========================
+    レスポンシブ時：菱形＋線を長くする
+  ========================= */
+
+  #glass .heading .line {
+    width: 45%;   /* ← 好みで 50〜65% */
+    height: 3px;  /* 太さも少し安定させる場合 */
+  }
+
+
+  /*画像*/
+  #glass .glass_image,
+  #glass .mini-glass_image,
+  #glass .single-flower-vase__image {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  #glass .chopstick-rest-images {
+    justify-content: center; 
+    margin-left: 0;       
+  }
+
+  #glass .chopstick-rest_image1,
+  #glass .chopstick-rest_image2 {
+    width: 35%;
+    margin: 0;               /* 余計なズレ防止 */
+    padding: 3%;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  /* 親で中央制御 */
+  #glass .sandblast-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+    margin-top: 10px;
+  }
+
+  /* 画像サイズと余白をリセット */
+  #glass .sandblasting-image1,
+  #glass .sandblasting-image2 {
+    width: 35%;
+    margin: 0;
+    padding: 3%;
+  }
+
+
+  /* 親で中央制御 */
+  #glass .fusing-images {
+    margin-left: 0;          /* ← これが超重要 */
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  /* 画像サイズと余白をリセット */
+  #glass .fusing-image1,
+  #glass .fusing-image2 {
+    width: 38%;
+    margin: 0;
+    padding: 3%;
+  }
+
+  #glass .reservation-notice {
+    margin-left: 3%;
+  }
+
+  #glass .tombodama-images {
+    margin-left: 0;          /* ← これが超重要 */
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  #glass .tombodama-images1,
+  #glass .tombodama-images2 {
+    width: 38%;
+    margin: 0;
+    padding: 3%;
+  }
+
+  /* 吹きガラス：文字＋画像を縦並び */
+  #glass .blownglass-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* 画像を文字の下・中央寄せ */
+  #glass .glassblowing-image {
+    margin: 10px auto 0;
+    width: 50%;
+    display: block;
+  }
+}
+
