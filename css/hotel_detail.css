@@ -1,0 +1,128 @@
+body {
+  background-image: url(../assets/images/hotel_detail/background.png);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.hotel_detail__ttl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 40px;
+  margin: 60px 0;
+}
+
+.hotel_detail__ttl::before, .hotel_detail__ttl::after {
+  display: block;
+  flex: 1;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: 100% 100%;
+  content: "";
+}
+
+.hotel_detail__ttl::before {
+  background-image: url(../assets/images/hotel_detail/ttl_left.png);
+  margin-right: 30px;
+}
+
+.hotel_detail__ttl::after {
+  background-image: url(../assets/images/hotel_detail/ttl_right.png);
+  margin-left: 30px;
+}
+
+.hotel_detail_ttl--text {
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 20px;
+  margin: 20px;
+}
+
+.room_detail {
+  width: 80%;
+  margin: 30px auto;
+}
+
+.room_detail__card {
+  font-family: "Sawarabi Mincho", serif;
+  background-color: #ffffff;
+  border: 2px solid #b8a36d;
+  border-radius: 15px;
+  padding: 50px;
+  margin-bottom: 30px;
+}
+
+.card__ttl {
+  font-size: 40px;
+}
+
+.room__gallery {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.room__gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slick-slider {
+  width: 80%;
+}
+
+.room__gallery .slick-slide {
+  height: 500px;
+}
+
+.slick-next.slick-arrow:before,
+.slick-prev.slick-arrow:before {
+  color: #000000;
+}
+
+.card__table {
+  width: 100%;
+}
+
+.table__th {
+  border: 1px solid #00000080;
+  background-color: #b8a36d80;
+  padding: 20px;
+  vertical-align: middle;
+}
+
+.table__td {
+  border: 1px solid #00000080;
+  vertical-align: middle;
+  padding: 20px;
+  vertical-align: middle;
+}
+
+.ul_grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-rows: 1fr;
+  grid-template-rows: repeat(4, auto);
+  gap: 10px;
+}
+
+.ul_grid li::before {
+  content: "・";
+}
+
+.aside {
+  width: 80%;
+  margin: 30px auto;
+  font-family: "Sawarabi Mincho", serif;
+}
+
+.aside__ttl {
+  font-size: 40px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}

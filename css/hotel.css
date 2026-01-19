@@ -1,0 +1,531 @@
+body {
+  background-image: url(../assets/images/hotel/background.png);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.header {
+  background-image: url(../assets/images/hotel/ホテルヘッダー背景.png);
+  aspect-ratio: 1440 / 652;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header__ttl {
+  color: white;
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 32px;
+  position: absolute;
+  top: 48px;
+  left: 57px;
+}
+
+.header__catch {
+  color: white;
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 64px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.info_bar {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.info_bar__item {
+  display: grid;
+  grid-template-columns: auto 2rem auto;
+  row-gap: 8px;
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 22px;
+}
+
+.info_bar__item-dt {
+  grid-column: 1;
+  text-align: right;
+  position: relative;
+}
+
+.info_bar__item-dt::after {
+  content: "：";
+  position: absolute;
+  right: -1.75rem;
+  color: #868686;
+}
+
+.info_bar__item-dd {
+  grid-column: 3;
+  margin: 0;
+  color: #868686;
+}
+
+hr.double_line {
+  border: none;
+  height: 0;
+  width: 100%;
+  margin: 10px auto;
+  position: relative;
+}
+
+hr.double_line::before,
+hr.double_line::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #B8A36C;
+  margin: 5px 0;
+}
+
+
+.news {
+  background-color: #ffffff;
+  margin: 50px;
+  display: flex;
+  border: 1px #EAD4B6 solid;
+  font-family: "Sawarabi Mincho", serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.news__ttl {
+  font-size: 36px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.news__move {
+  border: 1px #B8A36C solid;
+  border-radius: 10px;
+  font-size: 17px;
+  padding: 5px;
+}
+
+.news__card {
+  border-radius: 5%;
+  box-shadow: 0 4px 10px #00000026;
+  overflow: hidden;
+  margin: 10px;
+  width: 15%;
+  height: auto;
+}
+
+.news__card img {
+  width: 100%;
+}
+
+.news__card h3,
+.news__card p {
+  margin: 10px;
+}
+
+.news__color {
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-color: #fff61b59;
+}
+
+.intro {
+  display: flex;
+  margin: 20px 60px;
+}
+
+.intro__left {
+  width: 70%;
+}
+
+.intro__p {
+  font-size: 20px;
+  font-family: "Sawarabi Mincho", serif;
+  margin-top: 20px;
+  line-height: 140%;
+}
+
+.intro__right {
+  position: relative;
+  width: 30%;
+  min-height: 400px;
+}
+
+.intro__lead-deco {
+  margin-top: -20px;
+}
+
+
+.intro__lead-bg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 90%;
+  height: 100%;
+  background-image: url("../assets/images/hotel/ホテルリード文△.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+}
+
+.intro__lead {
+  position: absolute;
+  right: 24px;
+  bottom: 50px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 52px;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+  z-index: 1;
+}
+
+.banner__link {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 1178px;
+  margin: 0 auto;
+}
+
+.banner__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.banner__txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 48px;
+  font-family: "Sawarabi Mincho", serif;
+  text-align: center;
+  z-index: 1;
+  text-shadow: -1px -1px 0 #535C66, 1px -1px 0 #535C66, -1px 1px 0 #535C66, 1px 1px 0 #535C66;
+}
+
+.menu__ttl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 40px;
+  margin: 60px 0;
+}
+
+.menu__ttl::before, .menu__ttl::after {
+  display: block;
+  flex: 1;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: 100% 100%;
+  content: "";
+}
+
+.menu__ttl::before {
+  background-image: url(../assets/images/hotel/ttl_left.png);
+  margin-right: 30px;
+}
+
+.menu__ttl::after {
+  background-image: url(../assets/images/hotel/ttl_right.png);
+  margin-left: 30px;
+}
+
+.menu__rooms {
+  margin: 40px 0;
+}
+
+.room__ttl {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.room__ttl-img {
+  width: 30%;
+  height: auto;
+  display: block;
+}
+
+.room__ttl-text {
+  position: absolute;
+  top: 50%;
+  left: 17%;
+  transform: translate(-50%, -50%);
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 3vw;
+}
+
+.room__imgs {
+  display: flex;
+  gap: 0;
+  width: 95%;
+}
+
+.room__img1 {
+  width: 100%;
+  max-width: 44%;
+}
+
+.room__img-small {
+  display: flex;
+  max-width: 56%;
+  flex-wrap: wrap;
+}
+
+.room__img2, .room__img3 {
+  width: 100%;
+  max-width: 50%;
+  height: auto;
+  object-fit: contain;
+  object-position: top;
+}
+
+.room__info {
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 24px;
+  width: 100%;
+}
+
+.room__price {
+  margin: 20px;
+}
+
+.room__detail--link {
+  display: block;
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  color: #ffffff;
+  background-color: #B8A36C;
+  border-radius: 10px 10px;
+}
+
+.menu__guide {
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 24px;
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.guide__content {
+  display: flex;
+  gap: 24px;
+}
+
+.guide__left, .guide__right {
+  max-width: 45%;
+  margin: 0 10px;
+}
+
+.guide__list {
+  margin-bottom: 15px;
+}
+
+.guide__list::before {
+  content: "★";
+}
+
+.meal::before {
+  content: "・";
+}
+
+.color__red {
+  color: #ff0000; 
+}
+
+.color__blue {
+  color: #1b24ff;
+}
+
+.guide__deco {
+  width: 30%;
+  margin-top: -50px;
+  float: right;
+}
+
+.amenities__ttl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 40px;
+  margin: 60px 0;
+}
+
+.amenities__ttl::before, .amenities__ttl::after {
+  display: block;
+  flex: 1;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: 100% 100%;
+  content: "";
+}
+
+.amenities__ttl::before {
+  background-image: url(../assets/images/hotel/ttl_left.png);
+  margin-right: 30px;
+}
+
+.amenities__ttl::after {
+  background-image: url(../assets/images/hotel/ttl_right.png);
+  margin-left: 30px;
+}
+
+.amenities__gallery {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.amenities__gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slick-slider {
+  width: 80%;
+}
+
+.amenities__gallery .slick-slide {
+  height: 500px;
+}
+
+.slick-next.slick-arrow:before,
+.slick-prev.slick-arrow:before {
+  color: #000000;
+}
+
+.amenities__table,
+.amenities__th,
+.amenities__td {
+  border: 1px solid #000000;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 16px;
+}
+
+.amenities__table {
+  width: 90%;
+}
+
+.amenities__td li::before {
+  content: "・";
+}
+
+.amenities__th {
+  background-color: #B8A36C80;
+  vertical-align: middle;
+}
+
+.ul_grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-rows: 1fr;
+  grid-template-rows: repeat(4, auto);
+  gap: 10px;
+}
+
+.amenities__note {
+  margin-top: 40px;
+}
+
+.large_bath__ttl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 40px;
+  margin: 60px 0;
+}
+
+.large_bath__ttl::before, .large_bath__ttl::after {
+  display: block;
+  flex: 1;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: 100% 100%;
+  content: "";
+}
+
+.large_bath__ttl::before {
+  background-image: url(../assets/images/hotel/ttl_left.png);
+  margin-right: 30px;
+}
+
+.large_bath__ttl::after {
+  background-image: url(../assets/images/hotel/ttl_right.png);
+  margin-left: 30px;
+}
+
+.budonoyu__ttl {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.budonoyu__ttl--text {
+  position: absolute;
+  top: 50%;
+  left: 17%;
+  transform: translate(-50%, -50%);
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 3vw;
+}
+
+.budonoyu__img1 {
+  width: 45%;
+  margin: 20px;
+}
+
+.budonoyu__wrapper {
+  display: flex;
+}
+
+.budonoyu__right {
+  margin: 20px;
+}
+
+.budonoyu_aside__ttl {
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 32px;
+}
+
+.budonoyu_aside__dl {
+  display: flex;
+  gap: 10px;
+  margin: 10px;
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 24px;
+}
+
+.budonoyu__img2, .budonoyu__img3 {
+  width: 45%;
+  height: auto;
+  object-fit: cover;
+  padding-top: 65px;
+}
