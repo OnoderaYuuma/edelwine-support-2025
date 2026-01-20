@@ -320,6 +320,90 @@ html, body {
     margin-left: auto;
 }
 
+
+/* =========================
+   スマホ表示のみ（768px以下）
+   ========================= */
+@media screen and (max-width: 768px) {
+
+  /* 全体を縦並び */
+  #top .purpose__contents {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  /* 各ブロック */
+  #top .purpose__item {
+    width: 100%;
+  }
+
+  /* 横並び用の余白をリセット */
+  #top .purpose__item--restaurant {
+    margin: 0;
+  }
+
+  /* 画像リンク */
+  #top .purpose__link {
+    position: relative;
+    display: block;
+  }
+
+  /* 画像をフル幅に */
+  #top .purpose__image_glass,
+  #top .purpose__image_restaurant,
+  #top .purpose_image_hotel {
+    width: 100%;
+    margin-bottom: 6px;
+    object-fit: cover;
+  }
+
+  /* 縦文字（画像の上に重ねる） */
+  #top .purpose__link::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 0.25em;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 0 6px rgba(0,0,0,0.6);
+  }
+
+
+  /* 施設名（画像の下） */
+  #top .purpose__label {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 4px;
+  }
+
+  /* =========================
+   スマホ時だけ画像を入れ替える
+   ========================= */
+
+  /* ガラス */
+  #top .purpose__image_glass {
+    content: url("/aseets/images/top/創作_スマホ.png");
+    object-fit: cover;
+  }
+
+  /* レストラン */
+  #top .purpose__image_restaurant {
+    content: url("/aseets/images/top/食事_スマホ.png");
+    object-fit: cover;
+  }
+
+  /* ホテル */
+  #top .purpose_image_hotel {
+    content: url("/aseets/images/top/宿泊_スマホ.png");
+    object-fit: cover;
+  }
+}
+=======
 @media screen and (max-width: 768px) {
 
   /* 背景をスマホで見やすく */
@@ -614,3 +698,4 @@ html, body {
   .header-nav.active {
     display: block;
   }
+
