@@ -26,11 +26,15 @@
     </div>
   </section>
   
-    <p class="morino-kuni-address">
-        所在地：〒028-3203   岩手県花巻市大迫町 大迫10-16-1
-    </p>
-
-    
+<div class="p-address">
+  <div class="p-address__inner">
+    <span class="p-address__label">所在地：</span>
+    <div class="p-address__content">
+      <span class="p-address__zip">〒028-3203</span>
+      <span class="p-address__detail">岩手県花巻市大迫町 大迫10-16-1</span>
+    </div>
+  </div>
+</div>
 
      <img src="../img/top/line.png" alt="線" class="section-line">
 
@@ -164,12 +168,24 @@
     
      <script>
     // header.htmlを読み込んで#headerに挿入
-    fetch("./header.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("header").innerHTML = data;
-      })
-      .catch(err => console.error(err));
+   fetch("./header.html")
+  .then(res => res.text())
+  .then(data => {
+    const headerContainer = document.getElementById("header");
+    headerContainer.innerHTML = data;
+
+    // header.html 内の要素を改めて取得してイベントを付ける
+    const ham = headerContainer.querySelector("#hamburger");
+    const nav = headerContainer.querySelector("#nav");
+    
+    if (ham && nav) {
+      ham.addEventListener("click", () => {
+        nav.classList.toggle("active");
+        // ボタン自体の色を変えたい場合はここに処理を追加
+      });
+    }
+  })
+  .catch(err => console.error(err));
 
       //フッター
       fetch("./footer.html")
@@ -177,6 +193,7 @@
         .then(html => {
           document.getElementById("footer").innerHTML = html;
         });
+
       </script>
   </main>
 </body>
