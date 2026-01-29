@@ -1,7 +1,7 @@
 @charset "utf-8";
 body {
    font-family: "Sawarabi Mincho", serif;
-   background: url(/img/top/background.png);
+   background: url(../img/top/background.png);
 }
 
 html, body {
@@ -13,7 +13,7 @@ html, body {
 #top .morino-kuni {
   width: 100%;
   height: 20%;
-  background-image: url(/img/top/top.png);
+  background-image: url(../img/top/top.png);
 }
 
 #top .morino-kuni-content {
@@ -404,7 +404,13 @@ html, body {
   }
 }
 
+  /* スマホ（768px以下）の時だけヘッダー背景を画像にする */
 @media screen and (max-width: 768px) {
+  .header {
+    width: 100%;
+    background: url("../img/top/top.png");
+  }
+}
 
   /* 背景をスマホで見やすく */
   body {
@@ -419,6 +425,8 @@ html, body {
     padding: 10% 0;
   }
 
+
+  
   #top .morino-kuni-content {
     flex-direction: column;
     align-items: center;
@@ -441,9 +449,11 @@ html, body {
     width: 80%;
   }
 
-  #top .morino-kuni-link a {
-    font-size: 15px;
-    padding: 4% 0;
+ #top .morino-kuni-link a {
+    display: block;          /* 縦に広げるため必須 */
+    font-size: 18px;
+    padding: 20px 0;         /* ← 縦をしっかり大きく */
+    text-align: center;
   }
 
   #top .morino-kuni-address {
@@ -479,10 +489,6 @@ html, body {
   }
 
   /* カード4つ → 1列縦並び */
-  #top .news-list {
-    flex-direction: column;
-    gap: 20px;
-  }
 
   #top .news-card {
     width: 100%;
@@ -540,7 +546,63 @@ html, body {
     width: 35%;
     transform: translateY(-20%);
   }
-}
+    /* 全体を縦並びに */
+  #top .news-box {
+    flex-direction: column;
+  }
+
+  /* 左エリアを横幅いっぱいに */
+  #top .news-left {
+    width: 100%;
+    padding: 0 0 20px;
+    text-align: center;
+  }
+
+  /* 右エリアも横幅いっぱいに */
+  #top .news-right {
+    width: 100%;
+  }
+
+  /* カードを2列にする */
+  #top .news-list {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  #top .news-card {
+    width: calc(50% - 6px); /* ← 2個横並び */
+  }
+
+  /* タイトル文字サイズ調整（任意） */
+  #top .news-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+   /* 左エリアを横並びに */
+  #top .news-left {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 20px;
+    text-align: left;
+  }
+
+  /* タイトル */
+  #top .news-title {
+    font-size: 24px;
+    margin-bottom: 0; /* 縦余白を消す */
+    margin-left: 5%;
+  }
+
+  /* ボタン */
+  #top .news-btn {
+    padding: 2% 6%;
+    font-size: 14px;
+    border-radius: 16px;
+    white-space: nowrap; /* 折り返し防止 */
+  }
 
 /* ------------------------------------------------
    ヘッダー基本スタイル（PC）
@@ -609,7 +671,7 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
 
-    min-height: 100vh; /* ← 画面1枚分 */
+    min-height: 18vh; /* ← 画面1枚分 */
     display: flex;
     align-items: center;
   }
@@ -619,29 +681,34 @@ html, body {
     background: none;          /* ← 白ベタを消す */
     border-right: none;
     padding: 0;
-    margin-top: 10%;
     gap: 14px;
   }
 
   #top .morino-kuni-link a {
     width: 100%;
-    padding: 14px 0;
+    padding: 18px 0;
     border: 2px solid #fff;
     border-radius: 999px;
     color: #fff;
     background: rgba(255,255,255,0.15);
     backdrop-filter: blur(2px);
-    font-size: 16px;
+    font-size: 24px;
   }
 
  #top .morino-kuni-content {
     width: 100%;
-    padding: 12% 6% 10%;
+    padding: 2% 6% 10%;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
+ #top .morino-kuni-content h1 {
+    font-size: 24px;
+    align-self: flex-start;
+    text-align: left;
+    width: 100%;
+ }
   /* ロゴ少し大きめ */
   .header-logo {
     font-size: 20px;
@@ -655,12 +722,6 @@ html, body {
   .header {
     width: 100%;
     padding: 12px 16px;
-
-    /* ▼ ここが重要 */
-    background-image: url("/img/top/top.png");
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
   }
 
 }
@@ -698,8 +759,59 @@ html, body {
     display: block;
   }
 
+#top .news-card-content h3 {
+    font-size: 11px;
+}
 
+   #top .news-card-content p {
+    text-align: right;
+    padding-right: 4px; /* 数値で微調整 */
+  }
 
+ .morino-kuni-address {
+    margin-left: -8px;
+  }
+
+/* --- 住所エリア全体の基本設定 --- */
+.p-address {
+  margin: 80px 0;          /* 上下のセクションとの余白をしっかり確保 */
+  display: flex;
+  justify-content: center; /* 画面の中央に配置 */
+  font-family: "Sawarabi Mincho", serif;
+}
+
+.p-address__inner {
+  display: flex;
+  align-items: center;     /* 上下の中央を揃える */
+  gap: 15px;               /* 「所在地：」と住所の間の余白 */
+  font-size: 20px;         /* PCで見やすいサイズに調整 */
+}
+
+/* 郵便番号と詳細住所を包むコンテナ */
+.p-address__content {
+  display: flex;
+  flex-direction: row;     /* デフォルト（PC）では横並び */
+  gap: 10px;               /* 郵便番号と住所の間の余白 */
+}
+
+/* --- スマホ表示の切り替え（768px以下） --- */
+@media screen and (max-width: 768px) {
+  .p-address {
+    margin: 40px 10px;     /* スマホでは上下の余白を少し詰める */
+  }
+
+  .p-address__inner {
+    align-items: flex-start; /* スマホでは「所在地：」を上揃えに */
+    font-size: 16px;
+  }
+
+  .p-address__content {
+    flex-direction: column;  /* スマホでは「所在地：」の横で改行させる */
+    gap: 0;                  /* 縦並び時の不要な隙間を消す */
+  }
+  #logo {
+    display: none;
+  }
   /* インスタ */
 
   /* 全体 */
@@ -737,4 +849,5 @@ html, body {
   .insta-thumbs {
     grid-template-columns: repeat(2, 1fr);
   }
+}
 }
