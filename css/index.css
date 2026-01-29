@@ -403,7 +403,7 @@ html, body {
     object-fit: cover;
   }
 }
-=======
+
 @media screen and (max-width: 768px) {
 
   /* 背景をスマホで見やすく */
@@ -698,3 +698,43 @@ html, body {
     display: block;
   }
 
+
+
+  /* インスタ */
+
+  /* 全体 */
+.insta-layout {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+/* メイン投稿 */
+.insta-main .instagram-media {
+  max-width: 100% !important;
+  margin: 0 auto 24px !important;
+}
+
+/* 下の4つ */
+.insta-thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.insta-thumbs .instagram-media {
+  min-width: auto !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+/* iframeがはみ出るのを防ぐ */
+.instagram-media iframe {
+  width: 100% !important;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+  .insta-thumbs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
