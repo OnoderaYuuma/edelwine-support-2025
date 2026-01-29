@@ -1,0 +1,174 @@
+@charset "utf-8";
+body {
+  font-family: "Sawarabi Mincho", serif;
+}
+
+/* ===== ハンバーガーボタン ===== */
+.hamburger__button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 30;
+
+  width: 40px;
+  height: 30px;
+
+  cursor: pointer;
+}
+
+/* ===== 共通線 ===== */
+.hamburger__line {
+  display: block;
+  width: 40px;
+  height: 4px;
+  margin: 6px 0;
+
+  background-color: #333;
+  border-radius: 2px;
+
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+/* メニューリスト */
+.hamburger__list {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;          /* ← ここで等間隔を調整 */
+  padding: 0 20px;
+}
+
+
+/* ===== → に変形 ===== */
+
+/* 上の線（矢印の上側） */
+.hamburger--open .hamburger__line--top {
+  transform: translateY(10px) rotate(45deg);
+  width: 16px;
+  margin-left: auto;
+}
+
+/* 真ん中の線（矢印の棒） */
+.hamburger--open .hamburger__line--middle {
+  opacity: 1;
+}
+
+/* 下の線（矢印の下側） */
+.hamburger--open .hamburger__line--bottom {
+  transform: translateY(-10px) rotate(-45deg);
+  width: 16px;
+  margin-left: auto;
+}
+
+/* ===== メニュー本体（右から出す） ===== */
+.hamburger__menu {
+  position: fixed;
+  top: 0;
+  right: -250px;      /* 初期は画面外 */
+  z-index: 20;
+
+  width: 250px;
+  height: 100%;
+
+  padding-top: 2%; /* ← ✕の下に文字が来る */
+  background-color: #D1B97B;
+  color: #FFFFFF;
+
+  transition: right 0.4s ease;
+}
+
+/* ===== 開いたとき ===== */
+.hamburger--open .hamburger__menu {
+  right: 0;
+}
+
+
+/* メニュー上部 */
+.hamburger__header {
+  display: flex;
+  justify-content: space-between; /* ← 左右に分ける */
+  align-items: center;
+
+  padding: 8px 20px 16px;
+  margin-bottom: 10%;
+
+  border-bottom: 1px solid #fff;
+}
+
+/* Menu */
+.hamburger__title {
+  font-size: 32px;          /* ← 大きめ */
+  font-family: "Times New Roman", serif; /* 上品寄せ（任意） */
+  color: #fff;
+}
+
+.hamburger__arrow {
+  font-size: 28px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* メニューを開いている間、ハンバーガーの線を非表示 */
+.hamburger--open .hamburger__line {
+  display: none;
+}
+
+
+/* ===== レスポンシブ対応 ===== */
+
+/* タブレット */
+@media (max-width: 1024px) {
+  .hamburger__menu {
+    width: 320px;
+    right: -320px;
+  }
+
+  .hamburger__title {
+    font-size: 28px;
+  }
+
+  .hamburger__arrow {
+    font-size: 24px;
+  }
+}
+
+/* スマホ */
+@media (max-width: 768px) {
+  .hamburger__menu {
+    width: 80%;
+    right: -80%;
+  }
+
+  .hamburger__list {
+    gap: 28px;
+  }
+
+  .hamburger__title {
+    font-size: 24px;
+  }
+
+  .hamburger__arrow {
+    font-size: 22px;
+  }
+}
+
+/* 小さめスマホ */
+@media (max-width: 480px) {
+  .hamburger__menu {
+    width: 50%;
+    right: -90%;
+  }
+
+  .hamburger__list {
+    gap: 24px;
+  }
+
+  .hamburger__title {
+    font-size: 22px;
+  }
+
+  .hamburger__link {
+    font-size: 15px;
+  }
+}

@@ -105,3 +105,9 @@ body {
   white-space: nowrap; /*改行しない*/
   width: 110%;
 }
+
+@media screen and (max-width: 768px) {
+  .inquiry__intro {
+    margin-left: 8%;
+  }
+}
