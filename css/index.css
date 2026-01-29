@@ -404,16 +404,6 @@ html, body {
   }
 }
 
-/* PC表示（デフォルト）：横並び */
-.morino-kuni-address {
-    display: flex;
-    justify-content: center; /* 画面中央寄せ */
-    align-items: center;     /* 上下中央揃え */
-    gap: 10px;               /* 各項目の間隔 */
-    font-size: 16px;         /* 必要に応じて調整 */
-}
-@media screen and (max-width: 768px) {
-
   /* スマホ（768px以下）の時だけヘッダー背景を画像にする */
 @media screen and (max-width: 768px) {
   .header {
@@ -613,7 +603,6 @@ html, body {
     border-radius: 16px;
     white-space: nowrap; /* 折り返し防止 */
   }
-}
 
 /* ------------------------------------------------
    ヘッダー基本スタイル（PC）
@@ -823,4 +812,42 @@ html, body {
   #logo {
     display: none;
   }
+  /* インスタ */
+
+  /* 全体 */
+.insta-layout {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+/* メイン投稿 */
+.insta-main .instagram-media {
+  max-width: 100% !important;
+  margin: 0 auto 24px !important;
+}
+
+/* 下の4つ */
+.insta-thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.insta-thumbs .instagram-media {
+  min-width: auto !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+/* iframeがはみ出るのを防ぐ */
+.instagram-media iframe {
+  width: 100% !important;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+  .insta-thumbs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 }

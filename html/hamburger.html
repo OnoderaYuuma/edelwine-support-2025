@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamburger Menu</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css">
+  <link rel="stylesheet" href="/css/hamburger.css">
+</head>
+<body>
+  <div class="hamburger" id="hamburger">
+    <button class="hamburger__button" type="button" aria-label="メニュー">
+      <span class="hamburger__line hamburger__line--top"></span>
+      <span class="hamburger__line hamburger__line--middle"></span>
+      <span class="hamburger__line hamburger__line--bottom"></span>
+    </button>
+
+    <nav class="hamburger__menu">
+      <div class="hamburger__header">
+        <span class="hamburger__title">Menu</span>
+        <button class="hamburger__arrow" type="button" aria-label="メニューを閉じる">
+          →
+        </button>
+      </div>
+
+      <ul class="hamburger__list">
+        <li class="hamburger__item">
+          <a class="hamburger__link" href="#">ホーム</a>
+        </li>
+        <li class="hamburger__item">
+          <a class="hamburger__link" href="./glass.html">ガラス工房 森のくに</a>
+        </li>
+        <li class="hamburger__item">
+          <a class="hamburger__link" href="./restaurant.html">レストラン ベルンドルフ</a>
+        </li>
+        <li class="hamburger__item">
+          <a class="hamburger__link" href="./hotel.html">ホテル ベルンドルフ</a>
+        </li>
+        <li class="hamburger__item">
+          <a class="hamburger__link" href="#">お知らせ</a>
+        </li>
+        <li class="hamburger__item">
+          <a class="hamburger__link" href="./company_info.html">企業概要</a>
+        </li>
+        <li class="hamburger__item">
+          <a class="hamburger__link" href="./contact.html">お問い合わせ</a>
+        </li>
+        <li class="hamburger__item">
+          <a class="hamburger__link" href="./index.html">CONTACT</a>
+        </li>
+        <li class="hamburger__item">
+          <a class="hamburger__link" href="./index.html">ACCESS</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const button = hamburger.querySelector(".hamburger__button");
+    const arrow = hamburger.querySelector(".hamburger__arrow");
+
+    button.addEventListener("click", () => {
+      hamburger.classList.toggle("hamburger--open");
+    });
+
+    arrow.addEventListener("click", () => {
+      hamburger.classList.remove("hamburger--open");
+    });
+  </script>
+
+</body>
+</html>
