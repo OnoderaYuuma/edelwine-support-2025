@@ -11,7 +11,8 @@
   <link rel="stylesheet" href="../css/hotel.css">
   <!-- slick.css -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 </head>
 
 <body>
@@ -20,30 +21,44 @@
       <h1 class="header__ttl">ホテル ベルンドルフ</h1>
       <p class="header__catch">癒しと安らぎの楽園</p>
     </div>
-    <div class="info_bar">
+    <!-- 以下、info_bar--pcとinfo_bar--spは共通フィールドを使って同じ値を出力してください -->
+    <div class="info_bar--pc">
+      <dl class="info_bar__item">
+        <div class="info_bar__pair">
+          <dt class="info_bar__item-dt">チェックイン</dt>
+          <dd class="info_bar__item-dd"><time datetime="15:00+09:00">15:00</time></dd>
+          <dt class="info_bar__item-dt">チェックアウト</dt>
+          <dd class="info_bar__item-dd"><time datetime="10:00+09:00">10:00</time></dd>
+        </div>
+        <div class="info_bar__pair">
+          <dt class="info_bar__item-dt">ぶどうの湯 営業時間</dt>
+          <dd class="info_bar__item-dd"><time datetime="14:00+09:00">14:00</time>~<time
+              datetime="20:00+09:00">20:00</time></dd>
+          <dt class="info_bar__item-dt">ホテル玄関門限</dt>
+          <dd class="info_bar__item-dd"><time datetime="23:00+09:00">23:00</time></dd>
+        </div>
+        <div class="info_bar__pair info_bar__tel">
+          <dt class="info_bar__item-dt">TEL</dt>
+          <dd class="info_bar__item-dd"><a href="tel:0198484200">0198-48-4200</a></dd>
+        </div>
+      </dl>
+      <address>岩手県花巻市大迫町 11-34-6</address>
+    </div>
+    <div class="info_bar--sp">
       <dl class="info_bar__item">
         <dt class="info_bar__item-dt">チェックイン</dt>
         <dd class="info_bar__item-dd"><time datetime="15:00+09:00">15:00</time></dd>
         <dt class="info_bar__item-dt">チェックアウト</dt>
         <dd class="info_bar__item-dd"><time datetime="10:00+09:00">10:00</time></dd>
-      </dl>
-      <dl class="info_bar__item">
         <dt class="info_bar__item-dt">ぶどうの湯 営業時間</dt>
         <dd class="info_bar__item-dd"><time datetime="14:00+09:00">14:00</time>~<time
             datetime="20:00+09:00">20:00</time></dd>
         <dt class="info_bar__item-dt">ホテル玄関門限</dt>
         <dd class="info_bar__item-dd"><time datetime="23:00+09:00">23:00</time></dd>
-      </dl>
-      <dl class="info_bar__item">
         <dt class="info_bar__item-dt">TEL</dt>
         <dd class="info_bar__item-dd"><a href="tel:0198484200">0198-48-4200</a></dd>
       </dl>
-      <dl class="info_bar__item">
-        <dt class="hidden">住所</dt>
-        <dd class="info_bar__item-dd">
-          <address>岩手県花巻市大迫町 11-34-6</address>
-        </dd>
-      </dl>
+      <address>岩手県花巻市大迫町 11-34-6</address>
     </div>
     <hr class="double_line">
   </header>
@@ -80,8 +95,10 @@
       </article>
     </section>
     <section class="intro">
+      <!-- intro__leftに隠し文字を置く、rightはnoneにする -->
       <div class="intro__left">
         <h2 class="hidden">ご紹介</h2>
+        <p class="intro__lead--sp">心も体も癒される<br>観光　ビジネス<br>レジャーの楽園</p> <!-- リード文 -->
         <img src="../assets/images/hotel/ホテル外観(半透明).png" alt="ホテル外観" class="intro__img">
         <p class="intro__p">早池峰山の麓に佇む当ホテルは、ビジネス・観光・レジャーに最適な滞在先です。</p>
         <p class="intro__p">
@@ -93,7 +110,7 @@
       <div class="intro__right">
         <img src="../assets/images/hotel/桶.png" alt="" class="intro__lead-deco">
         <div class="intro__lead-bg"></div>
-        <p class="intro__lead">心も体も癒される<br>観光　ビジネス<br>レジャーの楽園</p> <!-- リード文 -->
+        <p class="intro__lead--pc">心も体も癒される<br>観光　ビジネス<br>レジャーの楽園</p> <!-- リード文 -->
       </div>
     </section>
     <section class="banner">
@@ -219,8 +236,8 @@
       <!-- ギャラリー表示 -->
       <div class="amenities__gallery">
         <img src="../assets/images/hotel/本館シングル_テレビ、冷蔵庫、電気ポット.jpg" alt="シングルルーム：テレビ・冷蔵庫・電気ポット"> <!-- 本館シングル7 -->
-        <img src="../assets/images/hotel/本館シングル_ドライヤー、歯ブラシ、シャントリ、タオル.jpg" alt="シングルルーム：ドライヤー・歯ブラシ・シャンプー・リンス・タオル">
-        <!-- 本館シングル6 -->
+        <img src="../assets/images/hotel/本館シングル_ドライヤー、歯ブラシ、シャントリ、タオル.jpg"
+          alt="シングルルーム：ドライヤー・歯ブラシ・シャンプー・リンス・タオル"><!-- 本館シングル6 -->
         <img src="../assets/images/hotel/本館シングル_浴衣.jpg" alt="シングルルーム：浴衣"> <!-- 本館シングル5 -->
         <img src="../assets/images/hotel/本館ツイン_ユニットバス.jpg" alt="ツインルーム：ユニットバス"> <!-- 本館ツイン13 -->
         <img src="../assets/images/hotel/洋室コテージ_キッチン用品.jpg" alt="洋室コテージ：キッチン用品"> <!-- コテージ棟A　3 -->
@@ -282,30 +299,33 @@
       </table>
     </section>
     <section id="large_bath">
+      <!-- 大きいdivにそれぞれをdivで置く、pcはgrid、スマホはflex+order -->
       <h2 class="large_bath__ttl">大浴場</h2>
       <div class="budonoyu__ttl">
         <img src="../assets/images/hotel/部屋名 左.png" alt="部屋名（左）" class="room__ttl-img">
         <h3 class="budonoyu__ttl--text">ぶどうの湯</h3>
       </div>
       <div class="budonoyu__wrapper">
-        <img src="../assets/images/hotel/ぶどうの湯1.png" alt="大浴場1" class="budonoyu__img1"> <!-- ぶどうの湯　3 -->
-        <aside class="budonoyu__right">
-          <h4 class="budonoyu_aside__ttl">＜日帰り入浴＞</h4>
-          <dl class="budonoyu_aside">
-            <div class="budonoyu_aside__dl">
-              <dt>営業時間</dt>
-              <dd><time datetime="14:00+09:00">14:00</time>～<time datetime="20:00+09:00">20:00</time>(最終受付<time
-                  datetime="19:30+09:00">19:30</time>)</dd>
-            </div>
-            <div class="budonoyu_aside__dl">
-              <dt>入浴料</dt>
-              <dd>大人 500円</dd>
-              <dd>小人 300円</dd>
-            </div>
-          </dl>
-          <img src="../assets/images/hotel/ぶどうの湯2.png" alt="大浴場2" class="budonoyu__img2"> <!-- ぶどうの湯　2 -->
-          <img src="../assets/images/hotel/ぶどうの湯3.png" alt="大浴場3" class="budonoyu__img3"> <!-- ぶどうの湯　サウナ3 -->
-        </aside>
+        <div class="budonoyu__img1"><img src="../assets/images/hotel/ぶどうの湯1.png" alt="大浴場1"></div> <!-- ぶどうの湯　3 -->
+        <div class="budonoyu__info">
+          <section>
+            <h4 class="info__ttl">＜日帰り入浴＞</h4>
+            <dl class="info__dl">
+              <div class="info__dtdd">
+                <dt>営業時間</dt>
+                <dd><time datetime="14:00+09:00">14:00</time>～<time datetime="20:00+09:00">20:00</time>(最終受付<time
+                    datetime="19:30+09:00">19:30</time>)</dd>
+              </div>
+              <div class="info__dtdd">
+                <dt>入浴料</dt>
+                <dd>大人 500円</dd>
+                <dd>小人 300円</dd>
+              </div>
+            </dl>
+          </section>
+        </div>
+        <div class="budonoyu__img2"><img src="../assets/images/hotel/ぶどうの湯2.png" alt="大浴場2"></div> <!-- ぶどうの湯　2 -->
+        <div class="budonoyu__img3"><img src="../assets/images/hotel/ぶどうの湯3.png" alt="大浴場3"></div> <!-- ぶどうの湯　サウナ3 -->
       </div>
     </section>
   </main>
