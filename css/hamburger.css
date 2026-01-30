@@ -23,7 +23,7 @@ body {
   height: 4px;
   margin: 6px 0;
 
-  background-color: #333;
+  background-color: #ffffff;
   border-radius: 2px;
 
   transition: transform 0.4s, opacity 0.4s;
@@ -67,7 +67,7 @@ body {
   z-index: 20;
 
   width: 250px;
-  height: 100%;
+  height: 70%;
 
   padding-top: 2%; /* ← ✕の下に文字が来る */
   background-color: #D1B97B;
@@ -136,7 +136,7 @@ body {
 /* スマホ */
 @media (max-width: 768px) {
   .hamburger__menu {
-    width: 80%;
+    width: 70%;
     right: -80%;
   }
 
@@ -145,30 +145,10 @@ body {
   }
 
   .hamburger__title {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .hamburger__arrow {
-    font-size: 22px;
-  }
-}
-
-/* 小さめスマホ */
-@media (max-width: 480px) {
-  .hamburger__menu {
-    width: 50%;
-    right: -90%;
-  }
-
-  .hamburger__list {
-    gap: 24px;
-  }
-
-  .hamburger__title {
-    font-size: 22px;
-  }
-
-  .hamburger__link {
-    font-size: 15px;
+    font-size: 26px;
   }
 }

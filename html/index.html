@@ -195,6 +195,29 @@
           document.getElementById("footer").innerHTML = html;
         });
 
+fetch("./hamburger.html") // ← ファイル名を合わせる
+  .then(res => res.text())
+  .then(data => {
+    const headerContainer = document.getElementById("header");
+    headerContainer.innerHTML = data;
+
+    // 読み込んだ後にイベントを再設定
+    const hamburger = headerContainer.querySelector("#hamburger");
+    const button = headerContainer.querySelector(".hamburger__button");
+    const arrow = headerContainer.querySelector(".hamburger__arrow");
+
+    if (button && hamburger) {
+      button.addEventListener("click", () => {
+        hamburger.classList.toggle("hamburger--open");
+      });
+    }
+    if (arrow && hamburger) {
+      arrow.addEventListener("click", () => {
+        hamburger.classList.remove("hamburger--open");
+      });
+    }
+  })
+  .catch(err => console.error(err));
       </script>
   </main>
 

@@ -644,22 +644,20 @@ html, body {
 /* ------------------------------------------------
    ハンバーガー
 ------------------------------------------------ */
-.hamburger {
-  display: none; /* ← PCでは非表示 */
-  width: 30px;
-  height: 22px;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
+.hamburger__line {
+  background-color: #ffffff;
+}
+.hamburger__header {
+    border-top: none; /* Menuの上の線を消す */
+    border-bottom: none;
 }
 
-.hamburger span {
-  height: 3px;
-  width: 100%;
-  background: #333;
-  border-radius: 2px;
+/* ボタン自体の枠線を消す */
+.hamburger__button {
+    border: none; /* ボタンの黒枠を消す */
+    background: transparent;
+    outline: none;
 }
-
 /* ------------------------------------------------
    スマホスタイル
 ------------------------------------------------ */
@@ -716,12 +714,13 @@ html, body {
 
   /* ハンバーガーを表示 */
   .hamburger {
-    display: flex;
+    display: flex !important;
   }
 
   .header {
     width: 100%;
-    padding: 12px 16px;
+    padding: 6% 10%;
+    background: transparent !important;
   }
 
 }
@@ -850,4 +849,5 @@ html, body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 }
