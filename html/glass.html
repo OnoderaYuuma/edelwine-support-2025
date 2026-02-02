@@ -25,11 +25,18 @@
     </div>
   </section>
 
-   <p class="morino-kuni-address">
-        営業時間：9:00〜17:00(最終受付16:00) 定休日：火曜日(祝祭日は営業)
-        TEL：0198-48-3009 岩手県花巻市大迫町10-45-1
-    </p>
-
+<section class="morino-kuni-info">
+  <div class="info-container">
+    <div class="info-row">
+      <span>営業時間：9:00〜17:00 (最終受付16:00)</span>
+      <span>定休日：火曜日 (祝祭日は営業)</span>
+    </div>
+    <div class="info-row">
+      <span>TEL：0198-48-3009</span>
+      <span class="info-address">岩手県花巻市大迫町10-45-1</span>
+    </div>
+  </div>
+</section>
     <img src="../img/top/line.png" alt="線" class="section-line">
 
 
@@ -51,7 +58,7 @@
     <a href="#" class="news-card card1">
     <img src="../img/glass/出張.png">
     <div class="news-card-content">
-        <h3>出張体験やってます！</h3>
+        <h3>出張体験！</h3>
         <p>ガラス工房森のくに</p>
     </div>
     <div class="news-card-footer"></div>
@@ -60,8 +67,8 @@
 <a href="#" class="news-card card2">
     <img src="../img/glass/出張.png">
     <div class="news-card-content">
-        <h3>出張体験やってます！</h3>
-        <p>ガラス体験工房森のくに</p>
+        <h3>出張体験！</h3>
+        <p>ガラス工房森のくに</p>
     </div>
     <div class="news-card-footer"></div>
   </a>
@@ -69,8 +76,8 @@
 <a href="#" class="news-card card3">
     <img src="../img/glass/出張.png">
     <div class="news-card-content">
-        <h3>出張体験やってます！</h3>
-        <p>ガラス体験工房森のくに</p>
+        <h3>出張体験！</h3>
+        <p>ガラス工房森のくに</p>
     </div>
     <div class="news-card-footer"></div>
 </a>
@@ -78,19 +85,23 @@
 <a href="#" class="news-card card4">
     <img src="../img/glass/出張.png">
     <div class="news-card-content">
-        <h3>出張体験やってます！</h3>
-        <p>ガラス体験工房森のくに</p>
+        <h3>出張体験！</h3>
+        <p>ガラス工房森のくに</p>
     </div>
     <div class="news-card-footer"></div>
 </a>
     </div>
 </section>
-<section class="intro-section">
+
+
   <div class="intro-wrapper">
 
     <!-- 左：画像＋文章 -->
     <div class="intro-left">
-      <img src="../img/glass/ガラス体験工房様子.png" class="intro-img">
+      <div class="intro-image-area">
+        <img src="../img/glass/ガラス体験工房様子.png" alt="PC用画像" class="pc-img">
+        <img src="../img/glass/sample2.png" alt="スマホ用画像" class="sp-img">
+    </div>
 
       <div class="intro-paragraph">
 
@@ -534,6 +545,32 @@
         </section>
     </footer>
 
+    <script>
+  // hamburger.htmlを読み込んで#headerに挿入
+  fetch("./hamburger.html")
+    .then(res => res.text())
+    .then(data => {
+      const headerContainer = document.getElementById("header");
+      headerContainer.innerHTML = data;
+
+      // ボタンのクリックイベントを設定
+      const hamburger = headerContainer.querySelector("#hamburger");
+      const button = headerContainer.querySelector(".hamburger__button");
+      const arrow = headerContainer.querySelector(".hamburger__arrow");
+
+      if (button && hamburger) {
+        button.addEventListener("click", () => {
+          hamburger.classList.toggle("hamburger--open");
+        });
+      }
+      if (arrow && hamburger) {
+        arrow.addEventListener("click", () => {
+          hamburger.classList.remove("hamburger--open");
+        });
+      }
+    })
+    .catch(err => console.error(err));
+</script>
     
 </body>
 </html>
