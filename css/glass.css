@@ -4,6 +4,10 @@ body {
    background: url(../img/top/background.png);
 }
 
+.sp-img {
+    display: none; /* PCではスマホ用を隠す */
+}
+
 /* ========= トップセクション ========== */
 .morino-kuni {
   display: grid;
@@ -82,6 +86,31 @@ body {
 .section-line {
   width: 100%;       /* 横幅いっぱいに */
   display: block;
+}
+
+/* --- 所在地エリア全体の共通設定（PC：中央揃え） --- */
+.morino-kuni-info {
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px;
+  font-family: "Sawarabi Mincho", serif;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* PCでは全体を中央へ */
+  gap: 15px;
+  width: 100%;
+  max-width: 900px; /* 広がりすぎ防止 */
+}
+
+.info-row {
+  display: flex;
+  justify-content: center; /* PCでは中央寄せ */
+  gap: 30px;
+  font-size: 18px;
+  width: 100%;
 }
 
 /* ▼ 全体（白い枠） */
@@ -172,7 +201,7 @@ body {
 
  /* タイトル */
 .news-card h3 {
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 2%; /* 広めにとる */
     margin-top: 6%;
     margin-left: 7%;
@@ -236,7 +265,7 @@ body {
   width: 60%;
 }
 
-.intro-img {
+.pc-img {
   width: 70%;
   max-width: 100%;
   height: auto;
@@ -1005,10 +1034,6 @@ html, body {
     padding: 3%;
   }
 
-}
-
-@media screen and (max-width: 768px) {
-
   /* 親で中央制御 */
   #glass .sandblast-image {
     display: flex;
@@ -1071,4 +1096,172 @@ html, body {
     width: 50%;
     display: block;
   }
+  #header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent !important;
+    z-index: 100;
+  }
+
+  /* 2. ハンバーガーメニューを白にする */
+  .hamburger__line {
+    background-color: #ffffff !important;
+  }
+  .hamburger__title,
+  .hamburger__arrow {
+    color: #ffffff !important;
+  }
+  .hamburger__button {
+    border: none !important;
+    background: transparent !important;
+  }
+
+  /* 3. メイン画像の調整 */
+  .morino-kuni {
+    height: auto;
+    min-height: 40vh;
+  }
+
+  /* 4. タイトルとテキストの調整（中央寄せなど） */
+  .morino-kuni-content {
+    padding-top: 80px; /* ハンバーガーボタンとの干渉回避 */
+    align-items: center;
+    text-align: center;
+  }
+  
+  .morino-kuni-title p {
+    font-size: 20px;
+  }
+
+  .morino-kuni-link h1 {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  .morino-kuni-info {
+    padding: 20px;
+  }
+
+  .info-container {
+    align-items: flex-start; /* 全体を左寄せに */
+    gap: 8px;
+  }
+
+  .info-row {
+    flex-direction: column;  /* 1項目ずつ縦に並べる */
+    align-items: flex-start; /* 文字を左寄せに */
+    gap: 8px;
+    font-size: 15px;
+  }
+
+  /* 2行目の中の「所在地」だけを右に寄せる */
+  .info-address {
+    align-self: flex-end;    /* これで所在地だけが右端に行きます */
+    text-align: right;
+    margin-top: 5px;
+  }
+
+
+/* --- 最新情報セクション共通 --- */
+.news-wrapper {
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-box {
+    flex-direction: column; /* 左右を上下に分割 */
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.news-left {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 20px;
+    text-align: left;
+  }
+
+  /* タイトル */
+.news-title {
+    font-size: 24px;
+    margin-bottom: 0; /* 縦余白を消す */
+    margin-left: 5%;
+  }
+
+  /* ボタン */
+.news-btn {
+    padding: 2% 6%;
+    font-size: 14px;
+    border-radius: 16px;
+    white-space: nowrap; /* 折り返し防止 */
+  }
+
+/* 右側のカードリスト */
+.news-right {
+    width: 100%;
+}
+
+.news-list {
+    flex-wrap: wrap; /* 折り返して2行にする */
+    justify-content: center;
+    gap: 10px;
+}
+
+/* カード1枚ずつの幅（スマホで2列にする） */
+.news-card {
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
+}
+
+.news-card img {
+    width: 100%;
+    height: 120px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.news-card-content {
+    padding: 10px;
+}
+
+/* --- レスポンシブ対応（スマホ画面） --- */
+@media screen and (max-width: 768px) {
+    /* 1. 画像の切り替え */
+    .pc-img {
+        display: none !important; /* スマホでPC用を隠す */
+    }
+    .sp-img {
+        display: block !important; /* スマホで専用画像を表示 */
+        width: 80%;
+        height: auto;
+        margin-left: 10%;
+    }
+
+    /* 2. 右側の要素（ビー玉・文字・三角形）を非表示にする */
+    .right-copy-wrapper {
+        display: none !important;
+    }
+
+    /* 3. レイアウト調整（画像を上に、文字を横並びに） */
+    .intro-left {
+        display: flex;
+        flex-direction: column; /* 画像と文字を上下に */
+        width: 100% !important;
+        gap: 20px;
+    }
+
+    .intro-paragraph {
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .intro-paragraph p {
+        padding: 3%;
+    }
+}
 }
