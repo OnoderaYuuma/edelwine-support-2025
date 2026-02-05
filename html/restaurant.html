@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css"> 
 </head>
 <body>
- <div id="header-area"></div>
+<div id="header"></div>
+
 
 <section id="berundorf-section">
   <img src="/img/restaurant/restaurantTOP.png" id="berundorf-bg" />
@@ -30,10 +31,7 @@
   </div>
 </section>
 
-<p id="berundorf-address">
-  営業時間：11:00〜15:00 ラストオーダー：14:30 定休日：火曜日<br />
-  TEL：0198-48-2155　岩手県花巻市大迫町18-12-5
-</p>
+
 
 <img src="../img/top/line.png" alt="線" id="section-line" />
 
@@ -52,7 +50,7 @@
         <a href="#" class="berundorf-news-card"> 
           <img src="../img/restaurant/news.png" /> 
           <div class="berundorf-news-card-content"> 
-            <h3>期間限定メニュー登場！</h3> 
+            <h3>期間限定メニュー！</h3> 
             <p>レストラン ベルンドルフ</p> 
           </div> 
           
@@ -62,7 +60,7 @@
         <a href="#" class="berundorf-news-card"> 
           <img src="../img/restaurant/news.png" /> 
           <div class="berundorf-news-card-content"> 
-            <h3>期間限定メニュー登場！</h3> 
+            <h3>期間限定メニュー！</h3> 
             <p>レストラン ベルンドルフ</p> 
           </div> 
           <div class="berundorf-news-card-footer"></div> 
@@ -71,7 +69,7 @@
         <a href="#" class="berundorf-news-card">
           <img src="../img/restaurant/news.png" /> 
           <div class="berundorf-news-card-content"> 
-            <h3>期間限定メニュー登場！</h3> 
+            <h3>期間限定メニュー！</h3> 
             <p>レストラン ベルンドルフ</p> 
           </div>
           <div class="berundorf-news-card-footer"></div> 
@@ -79,7 +77,7 @@
         <a href="#" class="berundorf-news-card"> 
           <img src="../img/restaurant/news.png" /> 
           <div class="berundorf-news-card-content"> 
-            <h3>期間限定メニュー登場！</h3> 
+            <h3>期間限定メニュー！</h3> 
             <p>レストラン ベルンドルフ</p> 
           </div> 
           <div class="berundorf-news-card-footer"></div> 
@@ -93,10 +91,13 @@
 <!--  Intro Section            -->
 <!-- ========================= -->
 <section id="berundorf-intro-section">
-  <div id="berundorf-intro-wrapper">
+<div id="berundorf-intro-wrapper" class="intro-wrapper">
 
-    <div id="berundorf-intro-left">
-      <img src="../img/restaurant/TOP2.png" id="berundorf-intro-img" />
+    <div id="berundorf-intro-left" class="intro-left">
+      <div class="intro-image-area">
+        <img src="../img/restaurant/TOP2.png" alt="レストラン外観" class="pc-img" id="berundorf-intro-img">
+        <img src="../img/restaurant/sample3.png" alt="レストラン外観" class="sp-img">
+      </div>
 
       <div id="berundorf-intro-paragraph">
         <p>
@@ -137,13 +138,16 @@
 <div id="berundorf-banner-wrapper">
   <a href="#" class="berundorf-banner-link">
     <div class="berundorf-banner-item">
-      <img src="/img/restaurant/団体予約.png" id="berundorf-banner-left" />
+      <img src="/img/restaurant/団体予約.png" id="berundorf-banner-left" class="pc-img" />
+      <img src="/img/restaurant/dantai.png" class="sp-img" />
     </div>
   </a>
 
   <a href="#" class="berundorf-banner-link">
     <div class="berundorf-banner-item">
-      <img src="/img/restaurant/宴会プラン.png" id="berundorf-banner-right" />
+      <img src="/img/restaurant/宴会プラン.png" id="berundorf-banner-right" class="pc-img" />
+      <img src="/img/restaurant/enkai.png" class="sp-img" />
+    </div>
   </a>
 </div>
 
@@ -518,14 +522,28 @@
         </section>
     </footer>
 
+<script>
+ fetch("header.html")
+    .then((res) => {
+      if (!res.ok) throw new Error("ヘッダーが見つかりません");
+      return res.text();
+    })
+    .then((data) => {
+      const headerContainer = document.getElementById("header");
+      headerContainer.innerHTML = data; // ここでHTMLを挿入
 
-  <script>
-    fetch("header.html")
-      .then((res) => res.text())
-      .then((data) => {
-        document.getElementById("header-area").innerHTML = data;
+      // 挿入されたHTMLの中からハンバーガーボタンとメニューを探す
+      const ham = headerContainer.querySelector("#hamburger");
+      const nav = headerContainer.querySelector("#nav");
+
+      // ボタンが存在すればクリックイベントを設定
+      if (ham && nav) {
+      ham.addEventListener("click", () => {
+        nav.classList.toggle("open"); // CSSで設定した.openクラスを付け外し
       });
-  </script>
+    }
+  });
+</script>
 
 </body>
 </html>
